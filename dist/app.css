@@ -61,3 +61,6 @@ html {
       transform: translateY(0);
     }
 }
+.css_img img{
+  height: 100%;
+}
