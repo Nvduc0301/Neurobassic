@@ -29,6 +29,9 @@ module.exports = {
         // animation: {
         //   slideDown: 'wiggle 1s ease-in-out'
         // }
+        // backgroundImage: {
+        //   'slide': 'url(".img/BGme-be.jpg")'
+        // }
     },
   },
   plugins: [],
