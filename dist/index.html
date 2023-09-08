@@ -10,26 +10,25 @@
     <script src="main.js" type="text/javascript" ></script>
 
     <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
-
-
 </head>
-<body class="w-full">
+<body class="">
     <!-- header -->
     <section>
         <header class=""> 
             <div class="flex">
-                <nav class="flex items-center justify-center mt-6 lg:h-10  relative w-full">
-                    <div class="lg:mr-[7.8rem] mr-[2rem] h-10 flex items-center lg:w-[17.1rem] w-[12rem] ">
+                <div class="flex items-center justify-around lg:justify-center mt-6 lg:h-10  relative w-full">
+                    
+                    <div class="lg:mr-[7.8rem] mr-[1.5rem] h-10 flex items-center lg:w-[17.1rem] w-[12rem] ">
                         <img src="img/Logo-Bvien.png" alt="website logo">
                     </div>
-                    <ul id="nvd-top-menu" class="nvd-topmenu-animation hidden lg:flex items-center justify-center font-bold text-b25  ">
-                        <li class="nvd-li-after leading-[1.6rem] text-[1.6rem]"><a href="#">Giới thiệu</a></li>
-                        <li class="nvd-li-after leading-[1.6rem] text-[1.6rem]"><a  href="#">Đối tượng khách hàng</a></li>
-                        <li class="nvd-li-after leading-[1.6rem] text-[1.6rem]"><a  href="#">Quy trình</a></li>
-                        <li class="nvd-li-after leading-[1.6rem] text-[1.6rem]"><a  href="#">Bảng giá</a></li>
-                        <li class="nvd-li-after leading-[1.6rem] text-[1.6rem]"><a  href="#">Cảm nhận của khách hàng</a></li>
-                        <li class="nvd-li-after leading-[1.6rem] text-[1.6rem]"><a  href="#">Đội ngũ bác sĩ</a></li>
-                        <li class="nvd-li-after leading-[1.6rem] text-[1.6rem]"><a  href="#">Hình ảnh & Video</a></li>
+                    <ul id="nvd-top-menu" class="hidden lg:flex items-center justify-center font-bold text-b25  ">
+                        <li class="nvd-li-after leading-[1.5rem] text-[1.5rem]"><a href="#">Giới thiệu</a></li>
+                        <li class="nvd-li-after leading-[1.5rem] text-[1.5rem]"><a  href="#">Đối tượng khách hàng</a></li>
+                        <li class="nvd-li-after leading-[1.5rem] text-[1.5rem]"><a  href="#">Quy trình</a></li>
+                        <li class="nvd-li-after leading-[1.5rem] text-[1.5rem]"><a  href="#">Bảng giá</a></li>
+                        <li class="nvd-li-after leading-[1.5rem] text-[1.5rem]"><a  href="#">Cảm nhận của khách hàng</a></li>
+                        <li class="nvd-li-after leading-[1.5rem] text-[1.5rem]"><a  href="#">Đội ngũ bác sĩ</a></li>
+                        <li class="nvd-li-after leading-[1.5rem] text-[1.5rem]"><a  href="#">Hình ảnh & Video</a></li>
                     </ul>
                     <!-- bg-  -->
                     <div  class=" flex  justify-center items-center bg-[#3EED88] shadow-lg shadow-[#3EED88]/50 rounded-[3rem] text-[#fff] py-[0.6rem] px-[1.2rem] ">
@@ -38,15 +37,19 @@
                         </div>
                         <a href="tel:1910 1806"  id="phone-text" class="font-bold text-[1.6rem] leading-[1.6rem]  pl-[0.4rem]  "> Gọi 1900 1806</a>
                     </div> 
-                    <!-- <div class="h-10  flex items-center">
-                        <img class="md:filter-none" src="img/hotline1900.png" alt="hotline log">
-                    </div> -->
+
                     <div onclick="toggleMenu()" id="nvd-toggle-top-menu-icon"  class="lg:hidden cursor-pointer px-2 sm:px-4">
                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-[3.5rem] h-[2.5rem] lg:w-6 lg:h-6">
                             <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
                         </svg>                   
                     </div>
-                </nav>
+                    <div onclick="toggleMenu()" id="nvd-toggle-top-menu-icon2"  class="hidden cursor-pointer px-2 sm:px-4">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-[3.5rem] h-[2.5rem] lg:w-6 lg:h-6">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+                          </svg>
+                    </div>
+ 
+                </div>
             </div>
         </header>
     </section>
@@ -331,8 +334,6 @@
     </section> -->
     
 
-    
-    
     <section>
         <div class="mx-auto max-w-full mt-[8rem] lg:mt-[16.5rem]">
             <div class="flex ">
@@ -549,40 +550,41 @@
         <!-- <div class="container"> -->
             <div class="md:flex items-center justify-center mt-[4rem] lg:mt-[2rem] mx-auto">
                 <div class="text-[#252525] lg:w-[53.9rem] md:w-1/2">
+
                     <div class="">
                         <img src="img/Bảng giá title.png" alt="">
                     </div>
                     <h2 class="font-bold text-[1rem] leading-[1rem] lg:text-[3.8rem] lg:leading-[3.8rem] w-[53.9rem] mb-[2.4rem]">Bảng giá dịch vụ niêm yết tại Bệnh viện Phương Đông</h2>
-                    <div class="flex items-center">
+                    <div  class="priceCombo  hover:cursor-pointer flex items-center">
                         <img src="img/+icon.png" alt="">
-                        <div class="font-semibold text-[1rem] leading-[1rem] lg:text-[1.4rem] lg:leading-[1.4rem] ml-[0.8rem]">Gói khám sức khỏe hậu COVID-19 CƠ BẢN</div>
+                        <div  onclick="changeImagePrice('img/MedicalMeaning.png', event)" class="detailPrice font-semibold text-[1rem] leading-[1rem] lg:text-[1.4rem] lg:leading-[1.4rem] ml-[0.8rem]">Gói khám sức khỏe hậu COVID-19 CƠ BẢN</div>
                     </div>
-                    <div class="flex items-center mt-[1.2rem]">
+                    <div class="priceCombo hover:cursor-pointer flex items-center mt-[1.2rem]">
                         <img src="img/+icon.png" alt="">
-                        <div class="font-semibold text-[1rem] leading-[1rem] lg:text-[1.4rem] lg:leading-[1.4rem] ml-[0.8rem]">Gói khám sức khỏe hậu COVID-19 NÂNG CAO</div>
+                        <div  onclick="changeImagePrice('img/MedicalMeaning.png', event)" class="detailPrice font-semibold text-[1rem] leading-[1rem] lg:text-[1.4rem] lg:leading-[1.4rem] ml-[0.8rem]">Gói khám sức khỏe hậu COVID-19 NÂNG CAO</div>
                     </div>
-                    <div class="flex items-center mt-[1.2rem]">
+                    <div class="priceCombo hover:cursor-pointer flex items-center mt-[1.2rem]">
                         <img src="img/+icon.png" alt="">
-                        <div class="font-semibold text-[1rem] leading-[1rem] lg:text-[1.4rem] lg:leading-[1.4rem] ml-[0.8rem]">Gói khám sức khỏe hậu COVID-19 TIÊU CHUẨN</div>
+                        <div  onclick="changeImagePrice('img/MedicalMeaning.png', event)" class="detailPrice font-semibold text-[1rem] leading-[1rem] lg:text-[1.4rem] lg:leading-[1.4rem] ml-[0.8rem]">Gói khám sức khỏe hậu COVID-19 TIÊU CHUẨN</div>
                     </div>
-                    <div class="flex items-center mt-[1.2rem]">
+                    <div class="priceCombo hover:cursor-pointer flex items-center mt-[1.2rem]">
                         <img src="img/+icon.png" alt="">
-                        <div class="font-semibold text-[1rem] leading-[1rem] lg:text-[1.4rem] lg:leading-[1.4rem] ml-[0.8rem]">Gói khám sức khỏe hậu COVID-19 CHUYÊN SÂU</div>
+                        <div  onclick="changeImagePrice('img/MedicalMeaning.png', event)" class="detailPrice font-semibold text-[1rem] leading-[1rem] lg:text-[1.4rem] lg:leading-[1.4rem] ml-[0.8rem]">Gói khám sức khỏe hậu COVID-19 CHUYÊN SÂU</div>
                     </div>
-                    <div class="flex items-center mt-[1.2rem]">
+                    <div class="priceCombo hover:cursor-pointer flex items-center mt-[1.2rem]">
                         <img src="img/+icon.png" alt="">
-                        <div class="font-semibold text-[1rem] leading-[1rem] lg:text-[1.4rem] lg:leading-[1.4rem] ml-[0.8rem]">Gói khám sức khỏe hậu COVID-19 TẠI NHÀ</div>
+                        <div  onclick="changeImagePrice('img/MedicalMeaning.png', event)" class="detailPrice font-semibold text-[1rem] leading-[1rem] lg:text-[1.4rem] lg:leading-[1.4rem] ml-[0.8rem]">Gói khám sức khỏe hậu COVID-19 TẠI NHÀ</div>
                     </div>
-                    <div class="flex items-center mt-[1.2rem]">
+                    <div class="priceCombo hover:cursor-pointer flex items-center mt-[1.2rem]">
                         <img src="img/+icon.png" alt="">
-                        <div class="font-semibold text-[1rem] leading-[1rem] lg:text-[1.4rem] lg:leading-[1.4rem] ml-[0.8rem]">Gói khám sức khỏe hậu COVID-19 CHO TRẺ CƠ BẢN ( trẻ từ 0 - 10 tuổi )</div>
+                        <div  onclick="changeImagePrice('img/MedicalMeaning.png', event)" class="detailPrice font-semibold text-[1rem] leading-[1rem] lg:text-[1.4rem] lg:leading-[1.4rem] ml-[0.8rem]">Gói khám sức khỏe hậu COVID-19 CHO TRẺ CƠ BẢN ( trẻ từ 0 - 10 tuổi )</div>
                     </div>
-                    <div class="flex items-center mt-[1.2rem]">
+                    <div class="priceCombo hover:cursor-pointer flex items-center mt-[1.2rem]">
                         <img src="img/+icon.png" alt="">
-                        <div class="font-semibold text-[1rem] leading-[1rem] lg:text-[1.4rem] lg:leading-[1.4rem] ml-[0.8rem] h-[2.4rem]">Gói khám sức khỏe hậu Covid-19 CHO TRẺ CHUYÊN SÂU ( trẻ từ 0-10 tuổi )</div>
+                        <div  onclick="changeImagePrice('img/MedicalMeaning.png', event)" class="detailPrice font-semibold text-[1rem] leading-[1rem] lg:text-[1.4rem] lg:leading-[1.4rem] ml-[0.8rem] h-[2.4rem]">Gói khám sức khỏe hậu Covid-19 CHO TRẺ CHUYÊN SÂU ( trẻ từ 0-10 tuổi )</div>
                     </div>
                     <div class="font-bold text-[1rem] leading-[1rem] lg:text-[1.8rem] lg:leading-[1.8rem] mt-[2rem] lg:mt-[4rem]">Quý khách vui lòng để lại số điện thoại, chúng tôi sẽ liên hệ lại ngay!</div>
-                    <div class="relative md:w-full w-1/2 ">
+                    <div class="relative md:w-full">
                         <input class="phone-price border-2 rounded-[2.7rem] w-full h-[4rem] lg:h-[5.4rem] pl-[2.4rem] bg-[#F5F5F5] text-[#333] mt-[1.6rem] outline-none" type="text" placeholder="Nhập số điện thoại..." >
                         <div onclick="sendPhonePrice()" class="absolute top-[2.2rem] right-[0.6rem] flex  justify-center items-center bg-[#3EED8B] shadow-lg shadow-[#3EED88]/50 rounded-[2.3rem] text-white  px-[2.1rem] py-[0.9rem] ">
                             <div class="w-[1.2rem] lg:w-[2.4rem]">
@@ -592,8 +594,8 @@
                         </div>
                     </div>
                 </div>
-                <div class="lg:ml-[4.8rem]">
-                    <img src="img/MedicalMeaning.png" alt="">
+                <div  class="lg:ml-[4.8rem]">
+                    <img id="img-price" src="img/MedicalMeaning.png" alt="">
                 </div>
             </div>
         <!-- </div> -->

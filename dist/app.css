@@ -13,36 +13,34 @@ html {
 .container {
   width: 80%; 
   margin: 0 auto;
-  /* other styling properties */
 }
 
 .css_img img{
   height: 100%;
-  /* image-rendering: pixelated; */
   object-fit: cover;
 }
 
+/* modal ul-li */
 .nvd-topmenu-expanded  {
   position: absolute;
+  left: 0;
   top: 40px;
   width: 100%;
   height: 300px;
-  background-color: #ccc;
-  backdrop-filter: blur(10px); /* Tạo hiệu ứng mờ */
+  background-color: rgba(105, 102, 102, 0.8);
+  color: #fff;
   z-index: 100;
   display: flex;
   flex-direction: column;
-  justify-content: center;
   animation: slideDown 1s ease-in-out;
-  /* margin-bottom: 300px; */
 }
 
 @keyframes slideDown {
   0% {
-    transform: translateY(-100%);
+    transform: translateX(100%);
   }
   100% {
-    transform: translateY(0);
+    transform: translateX(0);
   }
 }
 
@@ -99,8 +97,6 @@ html {
   font-weight: 600;
 }
 
-
-
 .swiper-pagination-team .swiper-pagination-total {
   font-size: 16px;
   position: absolute;
@@ -122,6 +118,10 @@ html {
   .swiper-pagination-team .swiper-pagination-total {
     font-size: 10px!important;
   }
+}
+
+.detailPrice.active {
+  color: #3EED8B;
 }
 
 /* *)modal */

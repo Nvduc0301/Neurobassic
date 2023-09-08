@@ -1,17 +1,17 @@
-
+// modal header
 
 const toggleMenu = () => {
     const topMenu = document.getElementById('nvd-top-menu')
-    // const toggleMenuIcon = document.getElementById('nvd-toggle-top-menu-icon')
-    const title = document.getElementById('title')
-    // toggleMenuIcon.addEventListener('click', (e) =>{
-    topMenu.classList.toggle('hidden')
+    const toggleMenuIcon = document.getElementById('nvd-toggle-top-menu-icon')
+    const toggleMenuIcon2 = document.getElementById('nvd-toggle-top-menu-icon2')
+    
     topMenu.classList.toggle('nvd-topmenu-expanded')
-    title.classList.toggle('mt-[300px]')
-    // }
-    // )
+    topMenu.classList.toggle('hidden')
+    toggleMenuIcon.classList.toggle('hidden')
+    toggleMenuIcon2.classList.toggle('hidden')
 }
 
+// hide phone header
 const hidePhoneText = () => {
     const phoneText = document.getElementById("phone-text");    
   
@@ -21,11 +21,10 @@ const hidePhoneText = () => {
       phoneText.innerText = "Gọi 1900 1806";
     }
   }
-  
-  window.addEventListener("resize", hidePhoneText);
-  document.addEventListener("DOMContentLoaded", hidePhoneText);
+window.addEventListener("resize", hidePhoneText);
+document.addEventListener("DOMContentLoaded", hidePhoneText);
 
-
+// check send intro
 const send = () => {
     var name = document.querySelector(".name").value;
   var phone = document.querySelector(".phone").value;
@@ -41,6 +40,7 @@ const send = () => {
     }
 }
 
+// check send price
 const sendPhonePrice = () => {
     var phone = document.querySelector(".phone-price").value;
     if (!phone) {
@@ -52,6 +52,8 @@ const sendPhonePrice = () => {
       }
 }
 
+
+// check send footer
 const sendFooter = () => {
     var name = document.querySelector(".name-footer").value;
     var phone = document.querySelector(".phone-footer").value;
@@ -67,6 +69,7 @@ const sendFooter = () => {
     }
 }
 
+// check send modal 
 const sendModal = () => {
     var name = document.querySelector(".name-modal").value;
     var phone = document.querySelector(".phone-modal").value;
@@ -83,6 +86,7 @@ const sendModal = () => {
     }
 }
 
+// Change img feel
 function changeImage(fileName, name, title) {
   let img = document.querySelector("#bannerImgFeel")
   img.setAttribute('src', fileName)
@@ -92,6 +96,22 @@ function changeImage(fileName, name, title) {
 
   var titleFeel = document.querySelector("#titleFeel")
   titleFeel.innerText = title
+}
+
+// Change img price
+function changeImagePrice(fileName, event) {
+  let img = document.querySelector("#img-price")
+  img.setAttribute('src', fileName)
+
+  var items = document.querySelectorAll(".detailPrice")
+
+      for (var i = 0; i < items.length; i++)    
+        if (items[i] === event.target) {
+          items[i].classList.add('red');
+        } else {
+          items[i].classList.remove('red');
+        }   
+  // priceCombo.classList.toggle('text-[#3EED8B]')
 }
 
 // const setupModal = () => { 
