@@ -1,11 +1,11 @@
 // modal header
 
 const toggleMenu = () => {
-    const topMenu = document.getElementById('nvd-top-menu')
-    const toggleMenuIcon = document.getElementById('nvd-toggle-top-menu-icon')
-    const toggleMenuIcon2 = document.getElementById('nvd-toggle-top-menu-icon2')
+    const topMenu = document.getElementById('top-menu')
+    const toggleMenuIcon = document.getElementById('toggle-topmenu-icon')
+    const toggleMenuIcon2 = document.getElementById('toggle-topmenu-icon2')
     
-    topMenu.classList.toggle('nvd-topmenu-expanded')
+    topMenu.classList.toggle('topmenu-expanded')
     topMenu.classList.toggle('hidden')
     toggleMenuIcon.classList.toggle('hidden')
     toggleMenuIcon2.classList.toggle('hidden')
@@ -35,8 +35,13 @@ const send = () => {
       alert("Vui lòng nhập đủ thông tin");
     } else if (isNaN(phone)) {
       alert("Số điện thoại phải là số");
+      document.querySelector(".phone").value = "";
     } else {
       alert("Gửi thông tin thành công");
+      document.querySelector(".name").value = "";
+      document.querySelector(".phone").value = "";
+      document.querySelector(".email").value = "";
+      document.querySelector(".content").value = "";
     }
 }
 
@@ -47,8 +52,10 @@ const sendPhonePrice = () => {
         alert("Vui lòng nhập số điện thoại");
       } else if (isNaN(phone)) {
         alert("Số điện thoại phải là số");
+        document.querySelector(".phone-price").value = "";
       } else {
         alert("Gửi thông tin thành công");
+        document.querySelector(".phone-price").value = "";
       }
 }
 
@@ -64,8 +71,13 @@ const sendFooter = () => {
       alert("Vui lòng nhập đủ thông tin");
     } else if (isNaN(phone)) {
       alert("Số điện thoại phải là số");
+      document.querySelector(".phone-footer").value = "";
     } else {
-      alert("Gửi thông tin thành công");
+      alert("Đăng ký thành công");
+      document.querySelector(".name-footer").value = "";
+      document.querySelector(".phone-footer").value = "";
+      document.querySelector(".email-footer").value = "";
+      document.querySelector(".content-footer").value = "";
     }
 }
 
@@ -81,8 +93,13 @@ const sendModal = () => {
       alert("Vui lòng nhập đủ thông tin");
     } else if (isNaN(phone)) {
       alert("Số điện thoại phải là số");
+      document.querySelector(".phone-modal").value = "";
     } else {
       alert("Gửi thông tin thành công");
+      document.querySelector(".name-modal").value = "";
+      document.querySelector(".phone-modal").value = "";
+      document.querySelector(".email-modal").value = "";
+      document.querySelector(".content-modal").value = "";
     }
 }
 
@@ -99,49 +116,52 @@ function changeImage(fileName, name, title) {
 }
 
 // Change img price
-function changeImagePrice(fileName, event) {
-  let img = document.querySelector("#img-price")
-  img.setAttribute('src', fileName)
+  function changeImagePrice(element, fileName) {
+    let img = document.querySelector("#img-price")
+    img.setAttribute('src', fileName)
+    // Lấy tất cả các ô
+    document.querySelector(".detailPrice").classList.add("red");
+    const detailPrices = document.querySelectorAll(".detailPrice");
+    detailPrices.forEach(detailPrice => {
+      detailPrice.classList.remove("red");
+    });
+    element.classList.add("red");
 
-  var items = document.querySelectorAll(".detailPrice")
-
-      for (var i = 0; i < items.length; i++)    
-        if (items[i] === event.target) {
-          items[i].classList.add('red');
-        } else {
-          items[i].classList.remove('red');
-        }   
-  // priceCombo.classList.toggle('text-[#3EED8B]')
 }
 
-// const setupModal = () => { 
-//   const buyBtns = document.querySelectorAll('.btn-sign'); 
-//   const modal = document.querySelector('.js-modal'); 
-//   const modalcontainer = document.querySelector('.js-modal-container'); 
-//   const modalclose = document.querySelector('.js-modal-close');
+// modal click sign
 
-// function showBuyTickets(){ 
-//   modal.classList.add('open'); 
-// }
+const setupModal = () => {
+  const buyBtns = document.querySelectorAll('.btn-sign');
+  const modal = document.querySelector('.js-modal');
+  const modalcontainer = document.querySelector('.js-modal-container');
+  const modalclose = document.querySelector('.js-modal-close');
 
-// function hideBuyTickets(){ 
-//   modal.classList.remove('open'); 
-// }
+  const showBuyTickets = () => {
+    modal.classList.add('flex');
+    modal.classList.remove('hidden')
+  };
 
-// function stopPropagation(event){
-//    event.stopPropagation(); 
-// }
+  const hideBuyTickets = () => {
+    modal.classList.remove('flex');
+    modal.classList.add('hidden');
 
-// buyBtns.forEach(function(buyBtn){
-//    buyBtn.onclick = showBuyTickets; 
-// });
+  };
 
-// modalclose.onclick = hideBuyTickets;
-// modal.onclick = hideBuyTickets; 
-// modalcontainer.onclick = stopPropagation; 
-// }
+  const stopPropagation = (event) => {
+    event.stopPropagation();
+  };
 
-// setupModal();
+  buyBtns.forEach((buyBtn) => {
+    buyBtn.onclick = showBuyTickets;
+  });
+
+  modalclose.onclick = hideBuyTickets;
+  modal.onclick = hideBuyTickets;
+  modalcontainer.onclick = stopPropagation; 
+};
+
+setupModal();
 
 
 
