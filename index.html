@@ -6,10 +6,12 @@
     <title>Bệnh viện Phương Đông</title>
     <link rel="stylesheet" href="dist/style.css">
     <link rel="stylesheet" href="dist/app.css">
+    <script src="dist/main.js" type="text/javascript" ></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
-    <script src="main.js" type="text/javascript" ></script>
-
     <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
 </head>
 <body>
     <!-- header -->
@@ -25,19 +27,19 @@
                 </div>
             </div>           
         </div>  
-        <div class="container flex justify-between items-center max-h-[6.25rem]">
-            <div class="flex items-center">
+        <div class="container flex justify-between items-center ">
+            <div class="flex items-center my-3">
                 <div class="">
                     <img src="dist/img/header_logo.png" alt="">
                 </div>
-                <div class="ml-4 text-3xl font-light"><span class="font-semibold">Neuro</span>Basic</div>
+                <!-- <div class="ml-4 text-3xl font-light"><span class="font-semibold">Neuro</span>Basic</div> -->
             </div>
-            <div class="flex items-center bg-gradient-to-b from-[#FF41F7] to-[#6E2C91] rounded-full p-[0.375rem]">
-                <div class="">
+            <a href="tel:0588227799" class="flex items-center bg-gradient-to-b from-[#FF41F7] to-[#6E2C91] rounded-full p-1 sm:p-[0.375rem]">
+                <div class="w-8">
                     <img src="dist/img/header_phone-icon2.png" alt="">
                 </div>
-                <div class="ml-11 mr-[4.625rem] text-lg text-white">Liên hệ ngay</div>
-            </div>
+                <div class="text-sm lg:text-lg text-white lg:ml-11 lg:mr-[4.625rem] mx-4 lg:mx-0 whitespace-nowrap hover:cursor-pointer">Liên hệ ngay</div>
+            </a>
         </div>     
     </section>
 
@@ -45,65 +47,67 @@
     <section>
         <!-- <img src="dist/img/banner_bg-img.png" alt=""> -->
         <div class="bg-[url(img/banner_bg-img2.png)] bg-no-repeat bg-center  flex items-center" >
-            <div class="container flex items-center justify-between">
-                <div class="w-1/2">
-                    <h2 class="pt-24 text-3xl text-[#1F1F1F] font-semibold">Neurobasic </br>
+            <div class="container flex items-end">
+                <div class="lg:w-1/2 flex flex-col justify-center">
+                    <h2 class="lg:text-3xl text-2xl text-[#1F1F1F] font-semibold">Neurobasic </br>
                         Công thức tối ưu cho hoạt động trí óc
                     </h2>
                     <div class="my-8 grid grid-rows-8 gap-2">
                         <div class="flex">
-                            <div class="w-8">
+                            <!-- <div class="bg-[url(img/banner_confirm-icon.png)] ">
+                            </div> -->
+                            <div class="w-8 h-8 css_img">
                                 <img src="dist/img/banner_confirm-icon.png" alt="">
                             </div>
                             <div class="ml-2 text-[#858585]">Tăng cường trí nhớ.</div>
                         </div>
                         <div class="flex">
-                            <div class="w-8">
+                            <div class="w-8 h-8 css_img">
                                 <img src="dist/img/banner_confirm-icon.png" alt="">
                             </div>
                             <div class="ml-2 text-[#858585]">Gia tăng giấc ngủ ngon.</div>
                         </div>
                         <div class="flex">
-                            <div class="w-8">
+                            <div class="w-8 h-8 css_img">
                                 <img src="dist/img/banner_confirm-icon.png" alt="">
                             </div>
                             <div class="ml-2 text-[#858585]">Tăng khả năng tập trung.</div>
                         </div>
                         <div class="flex">
-                            <div class="w-8">
+                            <div class="w-8 h-8 css_img">
                                 <img src="dist/img/banner_confirm-icon.png" alt="">
                             </div>
                             <div class="ml-2 text-[#858585]">Tăng cường lưu thông máu.</div>
                         </div>
                         <div class="flex">
-                            <div class="w-8">
+                            <div class="w-8 h-8 css_img">
                                 <img src="dist/img/banner_confirm-icon.png" alt="">
                             </div>
                             <div class="ml-2 text-[#858585]">Khả năng hồi phục tổn thương của não.</div>
                         </div>
                         <div class="flex">
-                            <div class="w-8">
+                            <div class="w-8 h-8 css_img">
                                 <img src="dist/img/banner_confirm-icon.png" alt="">
                             </div>
                             <div class="ml-2 text-[#858585]">Cải thiện khả năng học tập cho trẻ nhỏ.  </div>
                         </div>
                         <div class="flex">
-                            <div class="w-8">
+                            <div class="w-8 h-8 css_img">
                                 <img src="dist/img/banner_confirm-icon.png" alt="">
                             </div>
                             <div class="ml-2 text-[#858585]">Giúp giảm căng thẳng (stress), giảm triệu chứng lo âu và cải thiện tâm trạng.</div>
                         </div>
                         <div class="flex">
-                            <div class="w-8">
+                            <div class="w-8 h-8 css_img">
                                 <img src="dist/img/banner_confirm-icon.png" alt="">
                             </div>
                             <div class="ml-2 text-[#858585]">Giúp cải thiện tuần hoàn máu não và tuần hoàn máu ngoại vi, tăng cường lưu thông máu.</div>
                         </div>
                     </div>
                     <div class="mb-2 font-medium text-sm">Sản phẩm là thực phẩm bảo vệ sức khoẻ, không phải là thuốc, không có tác dụng thay thế thuốc chữa bệnh.</div>
-                    <div class="bg-gradient-to-b from-[#FF41F7] to-[#6E2C91] mb-12 rounded-full text-[1.125rem] max-w-[19rem] text-center text-white py-4">Liên hệ ngay</div>
+                    <a href="tel:0588227799"  class="bg-gradient-to-b from-[#FF41F7] to-[#6E2C91] mb-7 rounded-full text-sm lg:text-lg lg:max-w-[19rem] max-w-[15rem] text-center text-white py-3 lg:py-4 hover:cursor-pointer">Liên hệ ngay</a>
                 </div>
-                <div class="w-1/2 ml-16">
+                <div class="hidden lg:flex items-end w-1/2 ml-16 css_img">
                     <img src="dist/img/banner-img-nurse.png" alt="">
                 </div>
             </div>
@@ -112,15 +116,16 @@
 
     <!-- video -->
     <section>
-        <div class="mt-20 flex">
+        <div class="lg:mt-20 mt-10 flex">
             <div class="container">
-                <div class="text-center text-3xl font-medium">Bệnh tai biến mạch máu não – Bạn cần biết</div>
+                <div class="text-center lg:text-3xl text-2xl font-medium">Bệnh tai biến mạch máu não – Bạn cần biết</div>
                 <div class="mt-4">
-                    <img src="dist/img/sample_video.png" alt="">
-                    <!-- <video id="myVideo" autoplay=""  loop="" playsinline="" controls class="lg:rounded-[1.875rem] rounded">
-                        <source src="dist/img/TauSanBay.mp4" type="video/mp4">
+                    <!-- <img src="dist/img/sample_video.png" alt=""> -->
+                    <!-- autoplay="" -->
+                    <video id="myVideo"   loop="" playsinline="" controls class="lg:rounded-[1.875rem] rounded">
+                        <source src="dist/img/BVPD.mp4" type="video/mp4">
                         Your browser does not support the video tag.
-                    </video> -->
+                    </video>
                 </div>
             </div>
             <!-- <div class="bg-gradient-to-b from-[#FF41F7] to-[#6E2C91] rounded-full text-[1.125rem] max-w-[19rem] text-center text-white py-4">Liên hệ ngay</div> -->
@@ -129,58 +134,58 @@
 
     <!-- define -->
     <section>
-        <div class="bg-[url(img/detail_bg.png)] bg-no-repeat bg-center my-16 text-center">
+        <div class="bg-[#9c79a5] sm:bg-[url(img/detail_bg.png)] bg-no-repeat my-16 text-center">
             <div class="container">
-                <div class="pt-7 font-medium text-3xl text-white">Neurobasic – Sản phẩm hữu ích dành cho sức khoẻ</div>
+                <div class="pt-7 font-medium text-2xl lg:text-3xl text-white">Neurobasic – Sản phẩm hữu ích dành cho sức khoẻ</div>
                 <div class="mt-4 text-sm text-white max-w-[68rem]">Neurobasic là thực phẩm bảo vệ sức khỏe, thuộc nhóm hỗ trợ trí não, được sản xuất tại Công Ty TNHH Starphar, Việt Nam. Sản phẩm được bào chế dưới dạng viên, dùng trực tiếp bằng đường uống, thích hợp sử dụng cho người gặp các vấn đề về thiểu năng tuần hoàn não, rối loạn trí nhớ</div>
-                <div class="flex gap-9 my-8">
-                    <div class="flex flex-col items-center rounded-xl border-[#fff] border-[0.1rem] bg-white h-[17.5rem] max-w-[26rem]">
+                <div class="sm:flex gap-4 sm:gap-9 my-4 sm:my-8">
+                    <div class="sm:w-1/3 mx-auto flex flex-col items-center rounded-xl hover:bg-gradient-to-b from-[#FF41F7] to-[#6E2C91] bg-white h-[17.5rem] max-w-[26rem]">
                         <div class="mt-7">
                             <img src="dist/img/detail_icon-confirm.png" alt="">
                         </div>
                         <div class="flex flex-col flex-1 mx-5">
-                            <div class="font-bold text-lg my-4">Gia tăng sự tỉnh táo và tập trung</div>
-                            <div class="mb-7 text-sm">Làm tăng lưu lượng máu đến não và làm tặng sự 
+                            <div class="font-bold text-sm lg:text-lg my-4">Gia tăng sự tỉnh táo và tập trung</div>
+                            <div class="sm:mb-7 text-sm">Làm tăng lưu lượng máu đến não và làm tặng sự 
                                 tỉnh táo tập trung</div>
                         </div>
                     </div>
-                    <div class="flex flex-col items-center rounded-xl border-[#fff] border-[0.1rem] bg-white h-[17.5rem] max-w-[26rem]">
+                    <div class="sm:w-1/3 mx-auto my-4 sm:my-0 flex flex-col items-center rounded-xl hover:bg-gradient-to-b from-[#FF41F7] to-[#6E2C91] bg-white h-[17.5rem] max-w-[26rem]">
                         <div class="mt-7">
                             <img src="dist/img/detail_icon-confirm.png" alt="">
                         </div>
                         <div class="flex flex-col flex-1 mx-5">
-                            <div class="font-bold text-lg my-4">Hỗ trợ tăng cường trí nhớ</div>
-                            <div class="mb-7 text-sm">Điều hòa hoạt động và chức năng tế bào thần kinh, giúp duy trì sự ổn định cả lưu lượng máu đến não</div>
+                            <div class="font-bold text-sm lg:text-lg my-4">Hỗ trợ tăng cường trí nhớ</div>
+                            <div class="sm:mb-7 text-sm">Điều hòa hoạt động và chức năng tế bào thần kinh, giúp duy trì sự ổn định cả lưu lượng máu đến não</div>
                         </div>
                     </div>
-                    <div class="flex flex-col items-center rounded-xl border-[#fff] border-[0.1rem] bg-white h-[17.5rem] max-w-[26rem]">
+                    <div class="sm:w-1/3 mx-auto flex flex-col items-center rounded-xl hover:bg-gradient-to-b from-[#FF41F7] to-[#6E2C91] bg-white h-[17.5rem] max-w-[26rem]">
                         <div class="mt-7">
                             <img src="dist/img/detail_icon-confirm.png" alt="">
                         </div>
                         <div class="flex flex-col flex-1 mx-5">
-                            <div class="font-bold text-lg my-4">Tăng cường lưu thông máu</div>
-                            <div class="mb-7 text-sm">Tăng vận chuyển oxy và máu đến não để ngừa tình trạng co mạch, giúp não hoạt động tốt.</div>
+                            <div class="font-bold text-sm lg:text-lg my-4">Tăng cường lưu thông máu</div>
+                            <div class="sm:mb-7 text-sm">Tăng vận chuyển oxy và máu đến não để ngừa tình trạng co mạch, giúp não hoạt động tốt.</div>
                         </div>
                     </div>
                 </div>
 
-                <div class="flex justify-center gap-8 pb-12">
-                    <div class="flex flex-col items-center rounded-xl border-[#fff] border-[0.1rem] bg-white h-[17.5rem] max-w-[26rem]">
+                <div class="sm:flex justify-center gap-8 pb-12">
+                    <div class="sm:w-1/2 mx-auto sm:mx-0 flex flex-col items-center rounded-xl hover:bg-gradient-to-b from-[#FF41F7] to-[#6E2C91] bg-white h-[17.5rem] max-w-[26rem]">
                         <div class="mt-7">
                             <img src="dist/img/detail_icon-confirm.png" alt="">
                         </div>
                         <div class="flex flex-col flex-1 mx-5">
-                            <div class="font-bold text-lg my-4 min-h-[3.5rem]">Hỗ trợ giảm căng thẳng, giảm triệu chứng lo âu và cải thiện tâm trạng</div>
-                            <div class="mb-7 text-sm">Hỗ trợ phục hồi tổn thương ở não mức độ nhẹ, giúp hạn chế triệu chứng chóng mặt, đau đầu, giúp tăng cường trí nhớ để học tập và làm việc hiệu quả.</div>
+                            <div class="font-bold text-sm lg:text-lg my-4 min-h-[3.5rem]">Hỗ trợ giảm căng thẳng, giảm triệu chứng lo âu và cải thiện tâm trạng</div>
+                            <div class="sm:mb-7 text-sm">Hỗ trợ phục hồi tổn thương ở não mức độ nhẹ, giúp hạn chế triệu chứng chóng mặt, đau đầu, giúp tăng cường trí nhớ để học tập và làm việc hiệu quả.</div>
                         </div>
                     </div>
-                    <div class="flex flex-col items-center rounded-xl border-[#fff] border-[0.1rem] bg-white h-[17.5rem] max-w-[26rem]">
+                    <div class="sm:w-1/2 mx-auto sm:mx-0 flex flex-col items-center sm:mt-0 mt-4 rounded-xl hover:bg-gradient-to-b from-[#FF41F7] to-[#6E2C91] bg-white h-[17.5rem] max-w-[26rem]">
                         <div class="mt-7">
                             <img src="dist/img/detail_icon-confirm.png" alt="">
                         </div>
                         <div class="flex flex-col flex-1 mx-5">
-                            <div class="font-bold text-lg my-4 min-h-[3.5rem]">Gia tăng giấc ngủ ngon</div>
-                            <div class="mb-7 text-sm">Tăng tuần hoàn máu não, giúp não bộ được thư giãn, giảm các tình trạng lo âu, căng thẳng,ngủ ngon.</div>
+                            <div class="font-bold text-sm lg:text-lg my-4 min-h-[3.5rem]">Gia tăng giấc ngủ ngon</div>
+                            <div class="sm:mb-7 text-sm">Tăng tuần hoàn máu não, giúp não bộ được thư giãn, giảm các tình trạng lo âu, căng thẳng,ngủ ngon.</div>
                         </div>
                     </div>
                 </div>
@@ -190,24 +195,24 @@
 
     <!-- price -->
     <section>
-        <div class="container flex gap-8">
-            <div class="w-1/3">
-                <div class="text-[#792D99] text-[4.125rem] leading-[6.5rem]"><span class="font-bold ">NEURO</span>Basic</div>
-                <div class="mt-2 font-medium text-3xl tracking-wide">650.00VND</div>
-                <div class="text-[#858585] mt-4">Neurobasic là thực phẩm bảo vệ sức khỏe, thuộc nhóm hỗ trợ trí não, được sản xuất tại Công Ty TNHH Starphar, Việt Nam. Sản phẩm được bào chế dưới dạng viên, dùng trực tiếp bằng đường uống, thích hợp sử dụng cho người gặp các vấn đề về thiểu năng tuần hoàn não, rối loạn trí nhớ</div>
-                <div class="flex justify-between mt-10">
+        <div class="container md:flex gap-8">
+            <div class="md:w-1/2 lg:w-1/3">
+                <div class="text-[#792D99] text-4xl lg:text-[4.125rem] lg:leading-[6.5rem]"><span class="font-bold ">NEURO</span>Basic</div>
+                <div class="mt-2 font-medium text-2xl lg:text-3xl tracking-wide">650.00VND</div>
+                <div class="text-[#858585] text-sm mt-4">Neurobasic là thực phẩm bảo vệ sức khỏe, thuộc nhóm hỗ trợ trí não, được sản xuất tại Công Ty TNHH Starphar, Việt Nam. Sản phẩm được bào chế dưới dạng viên, dùng trực tiếp bằng đường uống, thích hợp sử dụng cho người gặp các vấn đề về thiểu năng tuần hoàn não, rối loạn trí nhớ</div>
+                <div class="flex md:justify-between mt-10">
                     <div class="">
                         <img src="dist/img/price_icon-hand.png" alt="">
                     </div>
-                    <div class="w-full bg-gradient-to-b from-[#FF41F7] to-[#6E2C91] rounded-full text-[1.125rem] max-w-[19rem] text-center text-white py-4">Liên hệ ngay</div>
+                    <a href="tel:0588227799" class="btn-sign w-full flex items-center justify-center bg-gradient-to-b from-[#FF41F7] to-[#6E2C91] rounded-full text-sm lg:text-lg max-w-[19rem] text-center text-white py-3 lg:py-4 ml-2 hover:cursor-pointer">Mua ngay</a>
                 </div>
             </div>
-            <div class="w-1/3">
+            <div class="hidden lg:flex w-1/3">
                 <img src="dist/img/Price_img-medi.png" alt="">
             </div>
-            <div class="w-1/3 flex flex-col justify-center gap-6">
+            <div class="md:w-1/2 lg:w-1/3 flex flex-col justify-center gap-6 mt-4 md:mt-0">
                 <div class="bg-gradient-to-r from-[#FF41F7] to-[#6E2C91] rounded-full flex">
-                    <div class="ml-2">
+                    <div class="ml-2 my-2 flex items-center">
                         <img src="dist/img/price_img-user1.png" alt="">
                     </div>
                     <div class="text-white ml-8 flex flex-col justify-center">
@@ -217,7 +222,7 @@
                     </div>
                 </div>
                 <div class="bg-gradient-to-r from-[#FF41F7] to-[#6E2C91] rounded-full flex">
-                    <div class="ml-2">
+                    <div class="ml-2 my-2 flex items-center">
                         <img src="dist/img/price_img-user2.png" alt="">
                     </div>
                     <div class="text-white ml-8 flex flex-col justify-center">
@@ -227,7 +232,7 @@
                     </div>
                 </div>
                 <div class="bg-gradient-to-r from-[#FF41F7] to-[#6E2C91] rounded-full flex">
-                    <div class="ml-2">
+                    <div class="ml-2 my-2 flex items-center">
                         <img src="dist/img/price_img-user3.png" alt="">
                     </div>
                     <div class="text-white ml-8 flex flex-col justify-center">
@@ -236,7 +241,7 @@
                     </div>
                 </div>
                 <div class="bg-gradient-to-r from-[#FF41F7] to-[#6E2C91] rounded-full flex">
-                    <div class="ml-2">
+                    <div class="ml-2 my-2 flex items-center">
                         <img src="dist/img/price_img-user4.png" alt="">
                     </div>
                     <div class="text-white ml-8 flex flex-col justify-center">
@@ -251,66 +256,66 @@
     
     <!-- humans -->
     <section>
-        <div class="my-16">
+        <div class="my-8 lg:my-16">
             <div class="container">
-                <div class="font-medium text-3xl text-center">Những người có nguy cơ sủy giảm trí nhớ cao</div>
-                <div class="flex gap-9 my-8">
-                    <div class="bg-gradient-to-b  from-[#FF41F7] to-[#6E2C91] w-1/3 rounded-xl max-h-[26rem] max-w-[26rem]">
+                <div class="font-medium text-2xl lg:text-3xl text-center">Những người có nguy cơ sủy giảm trí nhớ cao</div>
+                <div class="md:flex gap-4 lg:gap-9 my-8">
+                    <div class="w-full mx-auto md:w-1/3 bg-gradient-to-b  from-[#FF41F7] to-[#6E2C91] rounded-xl max-h-[26rem] max-w-[26rem]">
                         <div class="m-6 flex flex-col items-center rounded-xl">
-                            <div class="">
+                            <div class="rounded mt-6 md:mt-0">
                                 <img src="dist/img/human_img-1.jpg" alt="">
                             </div>
                             <div class="flex flex-col flex-1 text-white">
-                                <div class="font-bold text-lg my-2 text-center">PHỤ NỮ SAU SINH</div>
+                                <div class="font-bold text-base lg:text-lg my-2 text-center">PHỤ NỮ SAU SINH</div>
                                 <div class="mb-7 text-sm">Hay quên là tình trạng thường xuyên gặp ở phụ nữ sau sinh. Nguyên nhân là do áp lực công việc, gia đình, thiếu máu não, suy giảm estrogen, thoái hóa tế bào thần kinh....
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <div class="bg-gradient-to-b  from-[#FF41F7] to-[#6E2C91] w-1/3 rounded-xl max-h-[26rem] max-w-[26rem]">
+                    <div class="w-full mx-auto md:w-1/3 bg-gradient-to-b  from-[#FF41F7] to-[#6E2C91] rounded-xl max-h-[26rem] max-w-[26rem]">
                         <div class="m-6 flex flex-col items-center rounded-xl">
-                            <div class="">
-                                <img src="dist/img/human_img-1.jpg" alt="">
+                            <div class="rounded mt-6 md:mt-0">
+                                <img src="dist/img/human_img-2.jpg" alt="">
                             </div>
                             <div class="flex flex-col flex-1 text-white">
-                                <div class="font-bold text-lg my-2 text-center">CHỊU NHIỀU ÁP LỰC</div>
+                                <div class="font-bold text-base lg:text-lg my-2 text-center">CHỊU NHIỀU ÁP LỰC</div>
                                 <div class="mb-7 text-sm">Căng thẳng có thể tác động đến mọi lứa tuổi từ trẻ em, người lớn đến người cao tuổi. Tuy tồn tại trên nhiều đối tượng và tác động theo những cách thức khác nhau nhưng căng thẳng tâm lý đều có một điểm chung là gây ra những nguy cơ gây ảnh hưởng đến sức khỏe và đời sống cảm xúc của người bệnh.
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <div class="bg-gradient-to-b  from-[#FF41F7] to-[#6E2C91] w-1/3 rounded-xl max-h-[26rem] max-w-[26rem]">
+                    <div class="w-full mx-auto md:w-1/3 bg-gradient-to-b  from-[#FF41F7] to-[#6E2C91] rounded-xl max-h-[26rem] max-w-[26rem]">
                         <div class="m-6 flex flex-col items-center rounded-xl">
-                            <div class="">
-                                <img src="dist/img/human_img-1.jpg" alt="">
+                            <div class="rounded mt-6 md:mt-0">
+                                <img src="dist/img/human_img-3.jpg" alt="">
                             </div>
                             <div class="flex flex-col flex-1 text-white">
-                                <div class="font-bold text-lg my-2 text-center">TỔN THƯƠNG NÃO</div>
+                                <div class="font-bold text-base lg:text-lg my-2 text-center">TỔN THƯƠNG NÃO</div>
                                 <div class="mb-7 text-sm">mô não đã bị tổn thương do chấn thương hoặc do bệnh lý. Trong khi định nghĩa tưởng chừng như đơn giản nhưng trên thực tế các tổn thương não có thể rất phức tạp do có nhiều loại tổn thương não khác nhau</div>
                             </div>
                         </div>
                     </div>
                 </div>
     
-                <div class="flex justify-center gap-8  pb-12">
-                    <div class="bg-gradient-to-b  from-[#FF41F7] to-[#6E2C91] rounded-xl max-h-[26rem] max-w-[26rem]">
+                <div class="md:flex justify-center gap-8 lg:pb-12">
+                    <div class="md:w-1/2 mx-auto md:mx-0 bg-gradient-to-b  from-[#FF41F7] to-[#6E2C91] rounded-xl max-h-[26rem] max-w-[26rem]">
                         <div class="m-6 flex flex-col items-center rounded-xl">
-                            <div class="">
-                                <img src="dist/img/human_img-1.jpg" alt="">
+                            <div class="rounded mt-6 md:mt-0">
+                                <img src="dist/img/human_img-4.jpg" alt="">
                             </div>
                             <div class="flex flex-col flex-1 text-white">
-                                <div class="font-bold text-lg my-2 text-center">RƯỢU BIA , THUỐC LÁ</div>
+                                <div class="font-bold text-base lg:text-lg my-2 text-center">RƯỢU BIA , THUỐC LÁ</div>
                                 <div class="mb-7 text-sm">Khi uống rượu hay bia cùng với thói quen hút thuốc lá, nó không chỉ làm tăng nguy cơ mắc các bệnh như: ung thư vòm họng, phổi… mà còn tổn thương cho cả não.</div>
                             </div>
                         </div>
                     </div>
-                    <div class="bg-gradient-to-b  from-[#FF41F7] to-[#6E2C91] rounded-xl max-h-[26rem] max-w-[26rem]">
+                    <div class="md:w-1/2 mx-auto md:mx-0 bg-gradient-to-b  from-[#FF41F7] to-[#6E2C91] rounded-xl max-h-[26rem] max-w-[26rem]">
                         <div class="m-6 flex flex-col items-center rounded-xl">
-                            <div class="">
-                                <img src="dist/img/human_img-1.jpg" alt="">
+                            <div class="rounded mt-6 md:mt-0">
+                                <img src="dist/img/human_img-5.png" alt="">
                             </div>
                             <div class="flex flex-col flex-1 text-white">
-                                <div class="font-bold text-lg my-2 text-center">NHÂN VIÊN VĂN PHÒNG</div>
+                                <div class="font-bold text-base lg:text-lg my-2 text-center">NHÂN VIÊN VĂN PHÒNG</div>
                                 <div class="mb-7 text-sm">Gần đây, nhiều nghiên cứu thống kê rằng 85% người trẻ dưới 50 tuổi ít nhất gặp phải một vấn đề về trí nhớ kém, trong đó có đến 20-30% ở người dưới 30 tuổi, phần còn lại tập trung ở lứa tuổi trung niên</div>
                             </div>
                         </div>
@@ -325,9 +330,9 @@
     <section>
         <div class="bg-[url(img/share_bg-img.png)] bg-no-repeat bg-center">
             <div class="container flex">
-                <div class="w-1/2 flex flex-col justify-around">
-                    <div class="font-medium text-3xl max-w-[28.5rem]">Bạn hãy chia sẻ những triệu chứng bạn mắc phải nhé:</div>
-                    <div class="flex flex-col gap-6">
+                <div class="w-full lg:w-1/2 flex flex-col justify-around">
+                    <div class="font-medium text-2xl lg:text-3xl max-w-[28.5rem]">Bạn hãy chia sẻ những triệu chứng bạn mắc phải nhé:</div>
+                    <div class="flex flex-col gap-6 mt-4 lg:mt-0">
                         <div class="flex">
                             <div class="">
                                 <img src="dist/img/share_icon-hand.png" alt="">
@@ -353,14 +358,14 @@
                             <div class="font-semibold ml-4">Triệu chứng khác:</div>
                         </div>
                     </div>
-                    <div class="relative">
-                        <input class="border-[#D6D0D0] w-full border-b-[0.0625rem] bg-transparent outline-none rounded-[0.0625rem]" type="text" placeholder="Chia sẻ triệu chứng của bạn với chúng tôi để có giải pháp tốt nhất...">
-                        <div class="absolute top-[-50%] right-0">
+                    <div class="relative mt-4 lg:mt-0 mb-4 md:mb-0">
+                        <input class="share border-[#D6D0D0] w-full border-b-[0.0625rem] bg-transparent outline-none rounded-[0.0625rem]" type="text" placeholder="Chia sẻ triệu chứng của bạn với chúng tôi để có giải pháp tốt nhất...">
+                        <div onclick="shareSick()" class="absolute top-[-50%] right-0">
                             <img src="dist/img/share_icon-fly.png" alt="">
                         </div>
                     </div>
                 </div>
-                <div class="w-1/2 mb-6">
+                <div class="hidden lg:flex w-1/2 mb-6">
                     <img src="dist/img/share_img-girl.png" alt="">
                 </div>
             </div>
@@ -369,29 +374,29 @@
 
      <!-- 2 disease -->
      <section>
-        <div class="my-16">
+        <div class="my-10 sm:my-16">
             <div class="container">
-                <div class="font-medium text-3xl text-center ">Alzheimers &Parkinson - Hai bệnh lý sa sút trí tuệ nghiêm trọng</div>
-                <div class="flex mt-8">
-                    <div class="w-1/2">
+                <div class="font-medium text-2xl lg:text-3xl text-center ">Alzheimers &Parkinson - Hai bệnh lý sa sút trí tuệ nghiêm trọng</div>
+                <div class="flex mt-4 sm:mt-8">
+                    <div class="hidden sm:flex w-1/2 css_img">
                         <img src="dist/img/2disease_img-examdisease.jpg" alt="">
                     </div>
-                    <div class="w-1/2 ml-8">
-                        <div class="font-semibold leading-9 text-2xl">ALZHEIMERS & PARKINSON</div>
-                        <div class="font-medium">Bệnh nguy hiểm  của chứng “suy giảm trí nhớ”</div>
+                    <div class="w-full sm:w-1/2 sm:ml-8">
+                        <div class="font-semibold leading-6 lg:leading-9 text-xl lg:text-2xl">ALZHEIMERS & PARKINSON</div>
+                        <div class="font-medium mt-2 lg:mt-0">Bệnh nguy hiểm  của chứng “suy giảm trí nhớ”</div>
                         <div class="font-light text-[#858585] text-sm mt-8">Chứng "hay quên" bệnh lý là tình trạng rất nguy hiểm sẽ sớm dẫn tới sa sút trí tuệ như Alzheimer và Parkinson”. Alhzeimer là bệnh do thoái hóa vùng não trí nhớ, còn Parkinson là thoái hóa vùng chất đen trên não. Khoảng 10% trường hợp suy giảm trí nhớ sẽ chuyển thành Alhzeimer. Hơn hết, chứng lãng quên ngày càng nặng sẽ ảnh hưởng lớn đến chất lượng công việc và cuộc sống người bệnh, về lâu dài sẽ mất dần khả năng sinh hoạt hàng ngày. Người bệnh thường không thọ, tử vong sau khoảng 8-10 năm kể từ khi phát bệnh.</div>
                     </div>
                 </div>
-                <div class="flex">
-                    <div class="w-1/2 flex flex-col justify-center">
-                        <div class="font-medium text-3xl leading-10">Tại sao neurobasic đạt hiệu quả sau 10 ngày sử dụng</div>
-                        <div class="font-medium">Neurobasic đạt hiệu quả sau 10 ngày sử dụng</div>
+                <div class="flex mt-10 sm:mt-0">
+                    <div class=" sm:w-1/2 flex flex-col justify-center">
+                        <div class="font-medium text-2xl lg:text-3xl leading-8 lg:leading-10">Tại sao neurobasic đạt hiệu quả sau 10 ngày sử dụng</div>
+                        <div class="font-medium mt-2 lg:mt-0">Neurobasic đạt hiệu quả sau 10 ngày sử dụng</div>
                         <div class="text-sm leading-5 text-[858585] mt-8">
                             <div class="mb-6">Công dụng của Phosphatidylserin và Cao bạch quả đối với hoạt động của não bộ chắc nhiều người đã biết. Có rất nhiều các sản phẩm chứa Phosphatidylserin hoặc Cao bạch quả trên thị trường, tuy nhiên sản phẩm phối hợp 2 dưỡng chất đó lại rất ít</div>
                             <div class="">NeuroBasic là một trong rất ít những sản phẩm đó. Điều này tạo ra sự khác biệt và hiệu quả tác dụng vượt trội cho NeuroBasic. Chính sự phối hợp hoàn hảo này cùng với L- glutamin và kỹ thuật bào chế hiện đại của cty Dược Khoa - Đại Học Dược Hà Nội đã giúp cho NeuroBasic đạt HIỆU QUẢ SAU 10 NGÀY SỬ DỤNG</div>
                         </div>
                     </div>
-                    <div class="w-1/2 ml-8">
+                    <div class="hidden sm:flex w-1/2 css_img ml-8">
                         <img src="dist/img/2disease_img-nurse.jpg" alt="">
                     </div>
                 </div>
@@ -401,47 +406,365 @@
 
      <!-- product -->
      <section>
-        <div class="bg-[url(img/product_bg.png)] bg-no-repeat bg-center">
+        <div class="bg-[#faebfb] bg-center">
             <div class="container">
-                <div class="font-medium text-3xl text-center">THÔNG TIN SẢN PHẨM</div>
-                <div class="flex">
-                    <div class="w-2/3">
-                        <div class="flex text-white w-full bg-gradient-to-b from-[#FF41F7] to-[#6E2C91] rounded-t-xl">
-                            <div class="w-1/2">MỤC</div>
-                            <div class="w-1/2">THỰC PHẨM CHỨC NĂNG - THẦN KINH</div>
+                <div class="font-medium text-2xl lg:text-3xl text-center pt-4">THÔNG TIN SẢN PHẨM</div>
+                <div class="flex mt-10">
+                    <div class="md:w-2/3">
+                        <div class="flex text-white w-full bg-gradient-to-b from-[#FF41F7] to-[#6E2C91] rounded-t-xl py-4">
+                            <div class="w-1/2 pl-7 border-white border-r-[0.0625rem]">MỤC</div>
+                            <div class="w-1/2 pl-8">THỰC PHẨM CHỨC NĂNG - THẦN KINH</div>
                         </div>
-                        <div class="w-full flex">
-                            <div class="w-1/2">
-                                <div class="border-[#FF41F7] border-[0.0625rem]">Thượng hiệu</div>
-                                <div class="border-[#FF41F7] border-[0.0625rem]">Đóng gói</div>
-                                <div class="border-[#FF41F7] border-[0.0625rem]">Dạng bào chế</div>
-                                <div class="border-[#FF41F7] border-[0.0625rem]">Xuất xứ</div>
-                                <div class="border-[#FF41F7] border-[0.0625rem]">Đối tượng sử dụng</div>
-                                <div class="border-[#FF41F7] border-[0.0625rem]">Thời điểm sử dụng</div>
-                                <div class="border-[#FF41F7] border-[0.0625rem]">Tình trạng</div>
-                            </div>
-                            <div class="w-1/2">
-                                <div class="border-[#FF41F7] border-[0.0625rem]">MTV Dược khoa</div>
-                                <div class="border-[#FF41F7] border-[0.0625rem]">Hộp 1 lọ 30 viên</div>
-                                <div class="border-[#FF41F7] border-[0.0625rem]">Đường uống</div>
-                                <div class="border-[#FF41F7] border-[0.0625rem]">Việt Nam</div>
-                                <div class="border-[#FF41F7] border-[0.0625rem]">12 tuổi trở lên</div>
-                                <div class="border-[#FF41F7] border-[0.0625rem]">Trong bữa ăn</div>
-                                <div class="border-[#FF41F7] border-[0.0625rem]">Còn hàng</div>
-                            </div>
+                        <div class="w-full grid grid-cols-2">
+                            <div class="border-[#FF41F7] border-[0.0625rem] pl-7 py-3  text-[#1F1F1F]">Thượng hiệu</div>
+                            <div class="border-[#FF41F7] border-[0.0625rem] pl-8 py-3 text-[#858585]">MTV Dược khoa</div>
+                            <div class="border-[#FF41F7] border-[0.0625rem] pl-7 py-3  text-[#1F1F1F]">Đóng gói</div>
+                            <div class="border-[#FF41F7] border-[0.0625rem] pl-8 py-3 text-[#858585]">Hộp 1 lọ 30 viên</div>
+                            <div class="border-[#FF41F7] border-[0.0625rem] pl-7 py-3  text-[#1F1F1F]">Dạng bào chế</div>
+                            <div class="border-[#FF41F7] border-[0.0625rem] pl-8 py-3 text-[#858585]">Đường uống</div>
+                            <div class="border-[#FF41F7] border-[0.0625rem] pl-7 py-3  text-[#1F1F1F]">Xuất xứ</div>
+                            <div class="border-[#FF41F7] border-[0.0625rem] pl-8 py-3 text-[#858585]">Việt Nam</div>
+                            <div class="border-[#FF41F7] border-[0.0625rem] pl-7 py-3  text-[#1F1F1F]">Đối tượng sử dụng</div>
+                            <div class="border-[#FF41F7] border-[0.0625rem] pl-8 py-3 text-[#858585]">12 tuổi trở lên</div>
+                            <div class="border-[#FF41F7] border-[0.0625rem] pl-7 py-3  text-[#1F1F1F]">Thời điểm sử dụng</div>
+                            <div class="border-[#FF41F7] border-[0.0625rem] pl-8 py-3 text-[#858585]">Trong bữa ăn</div>
+                            <div class="border-[#FF41F7] border-[0.0625rem] pl-7 py-3  text-[#1F1F1F]">Tình trạng</div>
+                            <div class="border-[#FF41F7] border-[0.0625rem] pl-8 py-3 text-[#858585]">Còn hàng</div>
                         </div>
-    
+                        <!-- <div class="w-full flex">
+                            <div class="w-1/2 font-medium">
+                                <div class="border-[#FF41F7] border-[0.0625rem] pl-7 py-3  text-[#1F1F1F]">Thượng hiệu</div>
+                                <div class="border-[#FF41F7] border-[0.0625rem] pl-7 py-3  text-[#1F1F1F]">Đóng gói</div>
+                                <div class="border-[#FF41F7] border-[0.0625rem] pl-7 py-3  text-[#1F1F1F]">Dạng bào chế</div>
+                                <div class="border-[#FF41F7] border-[0.0625rem] pl-7 py-3  text-[#1F1F1F]">Xuất xứ</div>
+                                <div class="border-[#FF41F7] border-[0.0625rem] pl-7 py-3  text-[#1F1F1F]">Đối tượng sử dụng</div>
+                                <div class="border-[#FF41F7] border-[0.0625rem] pl-7 py-3  text-[#1F1F1F]">Thời điểm sử dụng</div>
+                                <div class="border-[#FF41F7] border-[0.0625rem] pl-7 py-3  text-[#1F1F1F]">Tình trạng</div>
+                            </div>
+                            <div class="w-1/2 font-medium">
+                                <div class="border-[#FF41F7] border-[0.0625rem] pl-8 py-3 text-[#858585]">MTV Dược khoa</div>
+                                <div class="border-[#FF41F7] border-[0.0625rem] pl-8 py-3 text-[#858585]">Hộp 1 lọ 30 viên</div>
+                                <div class="border-[#FF41F7] border-[0.0625rem] pl-8 py-3 text-[#858585]">Đường uống</div>
+                                <div class="border-[#FF41F7] border-[0.0625rem] pl-8 py-3 text-[#858585]">Việt Nam</div>
+                                <div class="border-[#FF41F7] border-[0.0625rem] pl-8 py-3 text-[#858585]">12 tuổi trở lên</div>
+                                <div class="border-[#FF41F7] border-[0.0625rem] pl-8 py-3 text-[#858585]">Trong bữa ăn</div>
+                                <div class="border-[#FF41F7] border-[0.0625rem] pl-8 py-3 text-[#858585]">Còn hàng</div>
+                            </div>
+                        </div> -->
+                        
+                        <div class="font-semibold mt-6"><span class="text-[#FA1B1B]">Chống chỉ định*</span>: Không được dùng NeuroBasic cho người quá mẫn cảm với bất cứ thành phần nào có trong sản phẩm.</div>
                     </div>
-                    <div class="w-1/3">
+                    <div class="hidden md:flex w-1/3 ml-8 css_img">
                         <img src="dist/img/product_img-medicine.png" alt="">
                     </div>
                 </div>
-            </div>
+                <div class="font-medium text-2xl lg:text-3xl text-center mt-8">Thông tin hoạt chất và cơ chế tác dụng</div>
+                <div class="pb-10">
 
+                    <div class="mt-8">
+                        <div class="font-medium text-lg">Phosphatidyl serine 100mg</div>
+                        <div class="font-light mt-4"><span class="font-medium ">Phosphatidyl serine (PS) </span>Phosphatidyl serine là phospholipid quan trọng, thành phần chủ yếu của màng tế bào. Phosphatidyl serine là chất dinh dưỡng thiết yếu cho tế bào não, điều chỉnh tính linh hoạt của màng tế bào, dùng cải thiện chức năng và điều trị những tổn thương về não. Phosphatidyl serine được chiết xuất từ đậu nành và tinh chế nhờ công nghệ độc quyền, có nguồn gốc thiên nhiên, dung nạp tốt, dễ chuyển hóa. Tác dụng của phophatidyl serine:</div>
+                        <ul class="font-light">
+                            <li class="list-disc ml-6">Theo FDA: Phosphatidyl serine làm giảm nguy cơ suy giảm nhận thức ở người cao tuổi, làm giảm nguy cơ suy giảm trí tuệ ở người cao tuổi.</li>
+                            <li class="list-disc ml-6">Theo EFSA: Phosphatidyl serine có tác dụng hỗ trợ khả năng ghi nhớ và tăng hiệu suất làm việc của não bộ, tránh tình trạng stress, hỗ trợ chức năng nhận thức ở người trẻ tuổi.</li>
+                            <li class="list-disc ml-6">Nhiều nghiên cứu lâm sàng hiện có về tác dụng của phosphatidyl serine trong suy giảm nhận thức do tuổi tác (ARCD), suy thoái mất trí nhớ ở người cao tuổi, điều trị Alzheimer, Parkinson và cải thiện tâm tính, giảm thiểu tác dụng gây căng thẳng của hormon catabolic.</li>
+                            <li class="list-disc ml-6">Tăng sự nhạy bén, tỉnh táo và tập trung, cải thiện khả năng học tập.</li>
+                            <li class="list-disc ml-6">Giảm rối loạn, tăng năng động chú ý ở trẻ nhỏ.</li>
+                        </ul>
+                    </div>
+                    <div class="mt-8">
+                        <div class="font-medium text-lg">L glutamine 100mg</div>
+                        <div class="font-light mt-4"><span class="font-medium ">L-Glutamine </span>Tham gia vào quá trình tổng hợp protein của não, là tiền chất tạo GABA (acid g-aminobutyric) chất trung gian dẫn truyền thần kinh vỏ não, L-Glutamine – amide của acid glutamic, cần thiết cho hoạt động của chu trình Krebs (nguồn năng lượng tế bào). L-Glutamine là dạng vận chuyển -NH3 quan trọng trong não, là con đường chủ yếu để loại -NH3 tránh nhiễm độc cho não. Do đó L-Glutamine có tác dụng phục hồi chức năng tế bào não, ức chế những kích thích quá mức và duy trì những chức năng bình thường ở vỏ não.</div>
+                    </div>
+                    <div class="mt-8">
+                        <div class="font-medium text-lg">Ginkgo biloba extract 60mg</div>
+                        <div class="font-light mt-4"><span class="font-medium ">Ginkgo biloba </span>Ginkgo biloba làm tăng tuần hoàn động mạch ở các chi và não, bình thường hóa tính thấm của mao mạch trong chứng phù nề tự phát, tăng lưu lượng máu đến não, hoạt hóa sự chuyển hóa năng lượng của tế bào bằng cách gia tăng tiêu thụ glucose ở não bộ và cân bằng quá trình tiêu thụ oxy ở não. Ginkgo biloba làm giảm nguy cơ huyết khối thuộc vi tuần hoàn. Công dụng của Ginkgo biloba:</div>
+                        <ul class="font-light">
+                            <li class="list-disc ml-6">Điều trị mất trí nhớ ngắn hạn, thiếu nhạy bén và minh mẫn, trầm cảm, khó khăn trong việc tập trung tư tưởng.</li>
+                            <li class="list-disc ml-6">Điều trị các rối loạn chức năng cơ hữu của não có kèm theo các triệu chứng sa sút trí tuệ.</li>
+                            <li class="list-disc ml-6">Điều trị hội chứng khập khễnh gián cách, bệnh võng mạc, các hội chứng thuộc thiểu năng tai trong, lãng tai ở người cao tuổi, di chứng sau các tai nạn huyết mạch thuộc não và chấn thương sọ.</li>
+                            <li class="list-disc ml-6">Trạng thái lão suy, bệnh Alzheimer.</li>
+                            <li class="list-disc ml-6">Chứng giòn mao mạch.</li>
+                            <li class="list-disc ml-6">Hội chứng trước kinh nguyệt, nhức đầu, chứng bất lực …</li>
+                        </ul>
+                    </div>
+                    <a href="./pdfFile.pdf" target="blank" class="mt-10 justify-center flex w-full rounded-full bg-white border-[1px] border-solid border-[#6E2C91]  max-w-[19rem] py-2 lg:py-4">
+                        <div class="text-center font-medium bg-gradient-to-b from-[#FF41F7] to-[#6E2C91] text-transparent bg-clip-text mr-2 text-lg">Tải chi tiết</div>
+                        <div class="">
+                            <img src="dist/img/product_icon-pdf.png" alt="">
+                        </div>
+                    </a>
+                </div>
+                
+            </div>
         </div>
      </section>
+
+     <!-- use -->
+     <section>
+        <div class="my-8 lg:my-16">
+            <div class="container flex">
+                <div class="hidden md:flex w-1/3 css_img">
+                    <img src="dist/img/use_img-product.png" alt="">
+                </div>
+                <div class="w-1/2 md:w-1/3 md:mx-12 flex flex-col justify-between">
+                    <div class="mb-16 text-xl lg:text-2xl font-semibold">Hướng dẫn sử dụng</div>
+                    <ul class="flex flex-col gap-6 font-semibold text-[#858585] text-sm">
+                        <li class="list-disc ml-4">Dùng trực tiếp bằng đường uống</li>
+                        <li class="list-disc ml-4">Uống trong bữa ăn cùng nước lọc vừa đủ</li>
+                        <li class="list-disc ml-4">Không nhai, không bẻ viên thuốc khi uống</li>
+                        <li class="list-disc ml-4">Trẻ em trên 12 tuổi và người lớn: uống mỗi lần 1 viên thuốc. Mỗi ngày dùng từ 1 đến 3 lần.</li>
+                    </ul>
+                </div>
+                <div class="w-1/2 md:w-1/3 flex flex-col justify-between">
+                    <div class=" text-xl lg:text-2xl font-semibold">Sản phẩm Neurobasic gồm những thành phần chính là:</div>
+                    <ul class="flex flex-col gap-6 font-semibold text-[#858585] text-sm">
+                        <li class="list-disc ml-4">Phosphatidyl Serine 100mg</li>
+                        <li class="list-disc ml-4">L Glutamine 100mg</li>
+                        <li class="list-disc ml-4">Ginkgo Biloba Extract 60mg</li>
+                        <li class="list-disc ml-4">Tá dược vừa đủ 1 viên.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+     </section>
+
+     <!-- feedback -->
+     <section class="">
+        <div class="mb-16 bg-[url(img/feedback_bg.png)] bg-no-repeat bg-center py-11">
+            <div class="container">
+                <h3 class="uppercase font-medium text-[1.5rem] lg:text-[2rem] text-center mb-8 lg:mb-10">Phản hồi thực tế từ khách hàng</h3>
+                <div class="flex flex-col md:flex-row  gap-7">
+                    <div class="basis-1/3 flex mr-[-2rem] 2xl:mr-[-2.75rem]">
+                        <div class="basis-1/4 mt-[2rem] mr-[-2rem] 2xl:mr-[-2.75rem] z-10">
+                            <img src="dist/img/feedback_user1.png" alt="" title="Ảnh" width="112" height="112">
+                        </div>
+                        <div class="basis-3/4 bg-gradient-to-b from-[#FF41F7] to-[#6E2C91] rounded-xl text-white py-6 pl-11 pr-3">
+                            <p class="font-semibold text-[1.5rem] mb-2">CHÚ NGUYỄN VĂN TÚ</p>
+                            <p class="text-sm font-light">
+                                "Khi tôi đến tuổi trung niên, tôi bắt đầu có vấn đề về trí nhớ và tập trung Neurobasic đã thay đổi cuộc sống của tôi. Tôi đã sử dụng nó trong một năm và tôi thấy mình nhớ mọi thứ dễ dàng hơn. Điều này đã giúp tôi trong công việc và cuộc sống gia đình. Tôi không thể tin rằng sự thay đổi có thể đến từ một viên thuốc nhỏ như vậy."
+                            </p>
+                        </div>
+                    </div>
+                    <div class="basis-1/3 flex mr-[-2rem] 2xl:mr-[-2.75rem]">
+                        <div class="basis-1/4 mt-[2rem] mr-[-2rem] 2xl:mr-[-2.75rem] z-10">
+                            <img src="dist/img/feedback_user2.png" alt="" title="Ảnh" width="112" height="112">
+                        </div>
+                        <div class="basis-3/4 bg-gradient-to-b from-[#FF41F7] to-[#6E2C91] rounded-xl text-white py-6 pl-11 pr-3">
+                            <p class="font-semibold text-[1.5rem] mb-2">CHÚ NGUYỄN VĂN TÚ</p>
+                            <p class="text-sm font-light">
+                                "Khi tôi đến tuổi trung niên, tôi bắt đầu có vấn đề về trí nhớ và tập trung Neurobasic đã thay đổi cuộc sống của tôi. Tôi đã sử dụng nó trong một năm và tôi thấy mình nhớ mọi thứ dễ dàng hơn. Điều này đã giúp tôi trong công việc và cuộc sống gia đình. Tôi không thể tin rằng sự thay đổi có thể đến từ một viên thuốc nhỏ như vậy."
+                            </p>
+                        </div>
+                    </div>
+                    <div class="basis-1/3 flex mr-[-2rem] 2xl:mr-[-2.75rem]">
+                        <div class="basis-1/4 mt-[2rem] mr-[-2rem] 2xl:mr-[-2.75rem] z-10">
+                            <img src="dist/img/feedback_user3.png" alt="" title="Ảnh" width="112" height="112">
+                        </div>
+                        <div class="basis-3/4 bg-gradient-to-b from-[#FF41F7] to-[#6E2C91] rounded-xl text-white py-6 pl-11 pr-3">
+                            <p class="font-semibold text-[1.5rem] mb-2">CHÚ NGUYỄN VĂN TÚ</p>
+                            <p class="text-sm font-light">
+                                "Khi tôi đến tuổi trung niên, tôi bắt đầu có vấn đề về trí nhớ và tập trung Neurobasic đã thay đổi cuộc sống của tôi. Tôi đã sử dụng nó trong một năm và tôi thấy mình nhớ mọi thứ dễ dàng hơn. Điều này đã giúp tôi trong công việc và cuộc sống gia đình. Tôi không thể tin rằng sự thay đổi có thể đến từ một viên thuốc nhỏ như vậy."
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </section>
+     <!-- <section>
+        <div class="">
+            <div class="container ">
+                <div class="py-11">
+                    <div class="font-medium text-3xl text-center ">Phản hồi thực tế từ khách hàng</div>
+                    <div class="flex gap-28 mt-4">
+                        <div class="relative w-1/3 bg-gradient-to-b from-[#FF41F7] to-[#6E2C91] text-white rounded-xl">
+                            <div class="absolute left-[-25%] top-[15%]">
+                                <img src="dist/img/feedback_user1.png" alt="">
+                            </div>
+                            <div class="my-6 ml-11 mr-3">
+                                <div class="font-semibold text-2xl mb-2">CHÚ NGUYỄN VĂN TÚ</div>
+                                <div class="text-sm font-light">"Khi tôi đến tuổi trung niên, tôi bắt đầu có vấn đề về trí nhớ và tập trung Neurobasic đã thay đổi cuộc sống của tôi. Tôi đã sử dụng nó trong một năm và tôi thấy mình nhớ mọi thứ dễ dàng hơn. Điều này đã giúp tôi trong công việc và cuộc sống gia đình. Tôi không thể tin rằng sự thay đổi có thể đến từ một viên thuốc nhỏ như vậy."</div>
+                            </div>
+                        </div>
+                        <div class="relative w-1/3 bg-gradient-to-b from-[#FF41F7] to-[#6E2C91] text-white rounded-xl">
+                            <div class="absolute left-[-25%] top-[15%]">
+                                <img src="dist/img/feedback_user2.png" alt="">
+                            </div>
+                            <div class="my-6 ml-11 mr-3">
+                                <div class="font-semibold text-2xl mb-2">CÔ LÊ THỊ VÂN</div>
+                                <div class="text-sm font-light">"Sản phẩm này đã thay đổi cuộc sống của tôi. Tôi có thể tập trung và nhớ thông tin tốt hơn, giúp công việc và cuộc sống cá nhân trở nên dễ dàng hơn. Tôi hoàn toàn hài lòng và sẽ tiếp tục sử dụng."</div>
+                            </div>
+                        </div>
+                        <div class="relative w-1/3 bg-gradient-to-b from-[#FF41F7] to-[#6E2C91] text-white rounded-xl">
+                            <div class="absolute left-[-25%] top-[15%]">
+                                <img src="dist/img/feedback_user3.png" alt="">
+                            </div>
+                            <div class="my-6 ml-11 mr-3">
+                                <div class="font-semibold text-2xl mb-2">Chị Chu Quỳnh Anh</div>
+                                <div class="text-sm font-light">"Tôi đã dùng Neurobasic trong một thời gian ngắn và hiệu quả thật bất ngờ! Lịch làm việc của tôi thường rất bận rộn và đôi khi tôi cảm thấy mệt mỏi và căng thẳng. Sản phẩm này đã thay đổi mọi thứ."</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+     </section> -->
+     
+     <!-- random -->
+     <section>
+        <div class="container flex">
+            <div class="w-1/3">
+                vòng quay
+            </div>
+            <div class="w-2/3 rounded-xl text-white font-semibold text-center" style="background-image: linear-gradient(135deg, #FF41F7, #6E2C91), url('img/ramdom_time-bg.png')" >
+                <div class=" text-[4rem] leading-[6rem] border-[#fff]  border-b-[0.0625rem] mx-[4.5rem]">VÒNG QUAY MAY MẮN</div>
+                <div class=" text-3xl mt-2">QUÀ TẶNG LÊN ĐẾN 80%</div>
+                <div class="mt-7 mb-9">
+                    <div class="">Thời gian còn lại</div>
+                    <div class="flex justify-center text-[5rem] leading-[6rem]">
+                        <div class="px-14">10</div>
+                        <div class="px-14 border-[#fff]  border-x-[0.0625rem] ">12</div>
+                        <div class="px-14">59</div>
+                    </div>
+                </div>
+            </div>
+            <!-- <img src="dist/img/ramdom_time-bg.png" alt=""> -->
+        </div>
+     </section>
+     
+     <!-- contact -->
+     <section>
+        <div class="container">
+            <div class="">
+                <div class="font-medium text-2xl lg:text-3xl text-center">Nhập thông tin để nhận được tư vấn miễn phí</div>
+                <div class="flex mt-8"> 
+                    <div class="w-1/2 mr-8 css_img">
+                        <img src="dist/img/contact_img-family.png" alt="">
+                    </div>
+                    <div class="w-1/2">
+                        <div class="text-xl lg:text-2xl">LIÊN HỆ VỚI CHÚNG TÔI</div>
+                        <div class="flex flex-col gap-4 my-8">
+                            <input  type="text" class="name-footer leading-9 pb-2 outline-none border-[#C8C8C8] border-b-[0.0625rem] placeholder-[#575757]" placeholder="Tên của bạn*">
+                            <input  type="text" class="phone-footer leading-9 pb-2 outline-none border-[#C8C8C8] border-b-[0.0625rem] placeholder-[#575757]" placeholder="Số điện thoại*">
+                            <input  type="email" class="email-footer leading-9 pb-2 outline-none border-[#C8C8C8] border-b-[0.0625rem] placeholder-[#575757]" placeholder="Email*">
+                            <input  type="text" class="content-footer pb-10 lg:pb-28 outline-none border-[#C8C8C8] border-b-[0.0625rem] placeholder-[#575757]" placeholder="Nhu cầu cần tư vấn của quý khách">
+                        </div>
+                        <div onclick="sendFooter()" class="bg-gradient-to-b from-[#FF41F7] to-[#6E2C91] hover:cursor-pointer rounded-full text-sm lg:text-lg max-w-[19rem] text-center text-white py-2 lg:py-4">Gửi thông tin</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+     </section>
+
+     <!-- footer -->
+     <section>
+        <div class="bg-[#faebfb] bg-no-repeat bg-center mt-24 ">
+            <div class="container lg:flex gap-8">
+                <div class="lg:w-1/3 flex mt-6">
+                    <div class="">
+                        <img src="dist/img/footer_logo.png" alt="">
+                    </div>
+                    <!-- <div class="ml-4 text-3xl font-light"><span class="font-semibold">Neuro</span>Basic</div> -->
+                </div>
+                <div class="lg:w-2/3 flex gap-8 lg:gap-24 mt-12 mb-6">
+                    <div class="w-1/4">
+                        <div class="font-semibold text-lg lg:text-2xl leading-9 mb-2">THÔNG TIN</div>
+                        <div class="flex flex-col gap-5">
+                            <div class="text-[#858585] text-sm lg:text-base">Giới thiệu</div>
+                            <div class="text-[#858585] text-sm lg:text-base">Liên hệ</div>
+                            <div class="text-[#858585] text-sm lg:text-base">Điều khoản dịch vụ</div>
+                        </div>
+                    </div>
+                    <div class="w-1/4">
+                        <div class="font-semibold text-lg lg:text-2xl leading-9 mb-2">TRUYỀN THÔNG</div>
+                        <div class="flex flex-col gap-5">
+                            <div class="flex items-center">
+                                <div class="mr-4">
+                                    <img src="dist/img/footer_icon-fb.png" alt="">
+                                </div>
+                                <div class="text-[#858585] text-sm lg:text-base">Facebook</div>
+                            </div>
+                            <div class="flex items-center">
+                                <div class="mr-4">
+                                    <img src="dist/img/footer_icon-zalo.png" alt="">
+                                </div>
+                                <div class="text-[#858585] text-sm lg:text-base">Zalo</div>
+                            </div>
+                            <div class="flex items-center">
+                                <div class="mr-4">
+                                    <img src="dist/img/footer_icon-whatsup.png" alt="">
+                                </div>
+                                <div class="text-[#858585] text-sm lg:text-base">WhatsApp</div>
+                            </div>
+                            <div class="flex items-center">
+                                <div class="mr-4">
+                                    <img src="dist/img/footer_icon-youtube.png" alt="">
+                                </div>
+                                <div class="text-[#858585] text-sm lg:text-base">Youtube</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="w-1/2">
+                        <div class="font-semibold text-lg lg:text-2xl leading-9 mb-2">LIÊN HỆ</div>
+                        <div class="flex flex-col gap-5">
+                            <div class="text-[#858585] text-sm lg:text-base">Tầng 6 tòa sông Đà, 131 Trần phú, Văn Quán Hà Đông, Hà Nội, Việt Nam</div>
+                            <div class="text-[#858585] text-sm lg:text-base">0588227799</div>
+                            <div class="text-[#858585] text-sm lg:text-base">Banhang@orientjsc.vn/office@orientjsc.vn</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="bg-[#6E2C91] pt-4 pb-3">
+            <div class="text-sm text-center text-white">Copyright © 2023 NeuroBasic. All rights reserved. Designed and developed by Tech5S</div>
+        </div>
+     </section>
+
+    <!-- modal -->
+    <!-- <section>
+        <div class="container">
+
+        <div class="js-modal hidden fixed top-0 bottom-0 left-0 right-0 bg-black bg-opacity-40 justify-center items-center z-[50]">
+            <div class="js-modal-container relative animate-[modalFaceIn_0.5s_ease] bg-[#fff] w-[80%] md:w-1/2 min-h-[20rem]">
+                <div class="js-modal-close absolute right-0 top-0 text-[#fff] p-[1.2rem] cursor-pointer opacity-[0.8] hover:opacity-[1]">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+                    </svg>
+                </div>         
+                <header class="h-[13rem] text-[#fff] text-center bg-gradient-to-br from-[#3EED8B] to-[#0A9949]">
+                    <div class="pt-[3rem] text-[2rem] lg:text-[2.8rem] leading-[2.8rem] font-bold">ĐĂNG KÝ</div>
+                    <div class="mt-[1.8rem] text-[1.4rem] lg:text-[1.6rem] leading-[1.92rem]">Đăng ký ngay để có một mức giá thật ưu đãi nào!</div>
+                </header>
+                <div class="modal-body p-[1.6rem]">
+                    <input  type="text" class="name-modal w-full border-[0.1rem] border-solid border-[#ccc] p-[1rem] text-[1.6rem] mb-[2.4rem] rounded-[0.8rem]" placeholder="Họ và tên (*)">
+                    <input  type="text" class="phone-modal w-full border-[0.1rem] border-solid border-[#ccc] p-[1rem] text-[1.6rem] mb-[2.4rem] rounded-[0.8rem]" placeholder="Số điện thoại (*)">
+                    <input  type="text" class="email-modal w-full border-[0.1rem] border-solid border-[#ccc] p-[1rem] text-[1.6rem] mb-[2.4rem] rounded-[0.8rem]" placeholder="E-mail">
+                    <input  type="email" class="content-modal w-full border-[0.1rem] border-solid border-[#ccc] p-[1rem] text-[1.6rem] mb-[2.4rem] rounded-[0.8rem]" placeholder="Nội dung...">
+                    <button onclick="sendModal()" id="buy-tickets" class="hover:opacity-[0.9] font-bold w-full p-[1.8rem] border-none text-[#fff] leading-[1.6rem] lg:text-[1.6rem] lg:leading-[1.92rem]  uppercase rounded-[0.8rem] bg-gradient-to-br from-[#3EED8B] to-[#0A9949] shadow-xl  shadow-[#3EED88]/20 tracking-[0.2rem]">
+                        ĐĂNG KÝ NGAY 
+                    </button>
+                </div>        
+            </div>
+        </div>
+        
+        </div>
+    </section>  -->
 
 
     
 </body>
 </html>
+
+
+
+
+<!-- respon bị nhỏ img -->
+<!-- random -->
+<!-- footer tràn  -->
+<!-- modal -->
+
+
+
