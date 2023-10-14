@@ -10,6 +10,7 @@
     <!-- <script src="dist/ramdom.js" type="text/javascript" ></script> -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
     <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous"/>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
@@ -113,7 +114,8 @@
                         Your browser does not support the video tag.
                     </video>
                     <div class="custom-video__control" >
-                        <img src="dist/img/video_pause-icon.png" alt="">
+                        <!-- <i class="fas fa-pause icon-pause"></i> -->
+                        <i class="fas fa-play icon-play"></i>
                     </div>
                         <!-- <div class="bg-[#FFFFFF26] flex justify-center items-center rounded-full top-1/2 z-20 left-1/2 min-w-[6.875rem] min-h-[6.875rem]">
                             ▶
@@ -541,19 +543,21 @@
     </section>
     
      <!-- random -->
-     <!-- <section> -->
-        <div class="container md:flex">
-            <div class="md:w-1/3 flex flex-col justify-center items-center">
-                <div class="random">
+     <section>
+        <div class="container lg:flex">
+            <div class="md:w-1/3 mx-auto flex flex-col justify-center items-center">
+                <div class="random mr-0 lg:mr-6">
                     <ul class="wheel "></ul>
+                    <div class="absolute top-[40%] left-[40%]">
+                        <img src="dist/img/ramdom_btn-arrow.png" alt="">
+                    </div>
                 </div>
-                <button class="btn-wheel hover:border-[1px] hover:border-solid hover:border-[#6E2C91] hover:text-transparent hover:bg-clip-text hover:cursor-pointer bg-gradient-to-b from-[#FF41F7] to-[#6E2C91] mb-7 rounded-full text-sm lg:text-lg lg:max-w-[19rem] max-w-[15rem] font-medium text-center text-white py-3 lg:py-4">Bấm nút quay</button>
-
-                <!-- <button class="btn-wheel">Bấm nút quay</button> -->
-                <h1 class="msg"></h1>
+                <button class="btn-wheel hover:border-[1px] hover:border-solid hover:border-[#6E2C91] hover:text-transparent hover:bg-clip-text hover:cursor-pointer">Bấm nút quay</button>
+                <!-- <h1 class="msg"></h1> -->
             </div>
-            <div class="md:py-9 py-4 max-h-[23.25rem] sm:w-2/3 mx-auto rounded-xl text-white font-semibold text-center" style="background-image: linear-gradient(to bottom, rgba(255, 64, 245, 0.8), rgba(109, 43, 145, 0.8)), url('dist/img/ramdom_time-bg.png'); background-size: contain; background-repeat: no-repeat;" >
-                <div class="text-xl lg:text-[4rem] lg:leading-[6rem] border-[#fff]  border-b-[0.0625rem] mx-[4.5rem]">VÒNG QUAY MAY MẮN</div>
+            <!-- max-h-[23.25rem]  -->
+            <div class="mb-10 lg:py-9 py-4 sm:w-2/3 xl:max-h-[23.25rem] mx-auto rounded-xl text-white font-semibold text-center" style="background-image: linear-gradient(to bottom, rgba(255, 64, 245, 0.8), rgba(109, 43, 145, 0.8)), url('dist/img/ramdom_time-bg.png'); background-size: contain; background-repeat: no-repeat;" >
+                <div class="text-2xl lg:text-[4rem] lg:leading-[6rem] border-[#fff]  border-b-[0.0625rem] mx-[4.5rem]">VÒNG QUAY MAY MẮN</div>
                 <div class="text-2xl lg:text-3xl mt-4">QUÀ TẶNG LÊN ĐẾN 80%</div>
                 <!-- <div class="mt-4 md:mb-9"> -->
                 <div class="mb-4 md:mt-7">Thời gian còn lại</div>
@@ -565,7 +569,7 @@
                 <!-- </div> -->
             </div>
         </div>
-    <!-- </section> -->
+    </section>
     <!-- <img src="dist/img/ramdom_time-bg.png" alt=""> -->
      
      <!-- contact -->
@@ -574,7 +578,7 @@
             <div class="">
                 <div class="font-medium text-2xl lg:text-3xl text-center">Nhập thông tin để nhận được tư vấn miễn phí</div>
                 <div class="md:flex mt-8"> 
-                    <div class="md:w-1/2 mr-8 css_img">
+                    <div class="md:w-1/2 mr-8 css_img w-full">
                         <img src="dist/img/contact_img-family.png" alt="">
                     </div>
                     <div class="md:w-1/2 mt-4 md:mt-0">
@@ -647,189 +651,190 @@
         </div>
     </section>
     <script>
-        // random
-(() => {
-	const $ = document.querySelector.bind(document);
+    // random
+    (() => {
+        const $ = document.querySelector.bind(document);
 
-	let timeRotate = 7000; //7 giây
-	let currentRotate = 0;
-	let isRotating = false;
-	const wheel = $('.wheel');
-	const btnWheel = $('.btn-wheel');
-	const showMsg = $('.msg');
+        let timeRotate = 7000; //7 giây
+        let currentRotate = 0;
+        let isRotating = false;
+        const wheel = $('.wheel');
+        const btnWheel = $('.btn-wheel');
+        // const showMsg = $('.msg');
 
-	//=====< Danh sách phần thưởng >=====
-	const listGift = [
-		{
-			text: 'Giảm 10%',
-			percent: 10 / 100,
-		},
-		{
-			text: 'Giảm 20%',
-			percent: 10 / 100,
-		},
-		{
-			text: 'Giảm 25%',
-			percent: 5 / 100,
-		},
-		{
-			text: 'Giảm 30%',
-			percent: 5 / 100,
-		},
-		{
-			text: 'Giảm 45%',
-			percent: 5 / 100,
-		},
-		{
-			text: 'Giảm 50%',
-			percent: 40 / 100,
-		},
-		{
-			text: 'Mua 1 tặng 1',
-			percent: 10 / 100,
-		},
-	];
+        //=====< Danh sách phần thưởng >=====
+        const listGift = [
+            {
+                text: 'Giảm 10%',
+                percent: 10 / 100,
+            },
+            {
+                text: 'Giảm 20%',
+                percent: 10 / 100,
+            },
+            {
+                text: 'Giảm 25%',
+                percent: 5 / 100,
+            },
+            {
+                text: 'Giảm 30%',
+                percent: 5 / 100,
+            },
+            {
+                text: 'Giảm 45%',
+                percent: 5 / 100,
+            },
+            {
+                text: 'Giảm 50%',
+                percent: 40 / 100,
+            },
+            {
+                text: 'Mua 1 tặng 1',
+                percent: 10 / 100,
+            },
+        ];
 
-	//=====< Số lượng phần thưởng >=====
-	const size = listGift.length;
+        //=====< Số lượng phần thưởng >=====
+        const size = listGift.length;
 
-	//=====< Số đo góc của 1 phần thưởng chiếm trên hình tròn >=====
-	const rotate = 360 / size;
+        //=====< Số đo góc của 1 phần thưởng chiếm trên hình tròn >=====
+        const rotate = 360 / size;
 
-	//=====< Số đo góc cần để tạo độ nghiêng, 90 độ trừ đi góc của 1 phần thưởng chiếm >=====
-	const skewY = 90 - rotate;
+        //=====< Số đo góc cần để tạo độ nghiêng, 90 độ trừ đi góc của 1 phần thưởng chiếm >=====
+        const skewY = 90 - rotate;
 
-	listGift.map((item, index) => {
-		//=====< Tạo thẻ li >=====
-		const elm = document.createElement('li');
+        listGift.map((item, index) => {
+            //=====< Tạo thẻ li >=====
+            const elm = document.createElement('li');
 
-		//=====< Xoay và tạo độ nghiêng cho các thẻ li >=====
-		elm.style.transform = `rotate(${
-			rotate * index
-		}deg) skewY(-${skewY}deg)`;
+            //=====< Xoay và tạo độ nghiêng cho các thẻ li >=====
+            elm.style.transform = `rotate(${
+                rotate * index
+            }deg) skewY(-${skewY}deg)`;
 
-		//=====< Thêm background-color so le nhau và căn giữa cho các thẻ text>=====
-		if (index % 3 === 0) {
-			elm.innerHTML = `<p style="transform: skewY(${skewY}deg) rotate(${rotate / 2}deg);" class="text text-1">
-			  <b>${item.text}</b>
-			</p>`;
-		  } else if (index % 3 === 1) {
-			elm.innerHTML = `<p style="transform: skewY(${skewY}deg) rotate(${rotate / 2}deg);" class="text text-2">
-			  <b>${item.text}</b>
-			</p>`;
-		  } else {
-			elm.innerHTML = `<p style="transform: skewY(${skewY}deg) rotate(${rotate / 2}deg);" class="text text-3">
-			  <b>${item.text}</b>
-			</p>`;
-		  }
+            //=====< Thêm background-color so le nhau và căn giữa cho các thẻ text>=====
+            if (index % 3 === 0) {
+                elm.innerHTML = `<p style="transform: skewY(${skewY}deg) rotate(${rotate / 2}deg);" class="text text-1">
+                <b>${item.text}</b>
+                </p>`;
+            } else if (index % 3 === 1) {
+                elm.innerHTML = `<p style="transform: skewY(${skewY}deg) rotate(${rotate / 2}deg);" class="text text-2">
+                <b>${item.text}</b>
+                </p>`;
+            } else {
+                elm.innerHTML = `<p style="transform: skewY(${skewY}deg) rotate(${rotate / 2}deg);" class="text text-3">
+                <b>${item.text}</b>
+                </p>`;
+            }
 
-		//=====< Thêm vào thẻ ul >=====
-		wheel.appendChild(elm);
-	});
+            //=====< Thêm vào thẻ ul >=====
+            wheel.appendChild(elm);
+        });
 
-	/********** Hàm bắt đầu **********/
-	const start = () => {
-		showMsg.innerHTML = '';
-		isRotating = true;
-		//=====< Lấy 1 số ngầu nhiên 0 -> 1 >=====
-		const random = Math.random();
+        /********** Hàm bắt đầu **********/
+        const start = () => {
+            // showMsg.innerHTML = '';
+            isRotating = true;
+            //=====< Lấy 1 số ngầu nhiên 0 -> 1 >=====
+            const random = Math.random();
 
-		//=====< Gọi hàm lấy phần thưởng >=====
-		const gift = getGift(random);
+            //=====< Gọi hàm lấy phần thưởng >=====
+            const gift = getGift(random);
 
-		//=====< Số vòng quay: 360 độ = 1 vòng (Góc quay hiện tại) >=====
-		currentRotate += 360 * 10;
+            //=====< Số vòng quay: 360 độ = 1 vòng (Góc quay hiện tại) >=====
+            currentRotate += 360 * 10;
 
-		//=====< Gọi hàm quay >=====
-		rotateWheel(currentRotate, gift.index);
+            //=====< Gọi hàm quay >=====
+            rotateWheel(currentRotate, gift.index);
 
-		//=====< Gọi hàm in ra màn hình >=====
-		showGift(gift);
-	};
+            //=====< Gọi hàm in ra màn hình >=====
+            showGift(gift);
+        };
 
-	/********** Hàm quay vòng quay **********/
-	const rotateWheel = (currentRotate, index) => {
-		$('.wheel').style.transform = `rotate(${
-			//=====< Góc quay hiện tại trừ góc của phần thưởng>=====
-			//=====< Trừ tiếp cho một nửa góc của 1 phần thưởng để đưa mũi tên về chính giữa >=====
-			currentRotate - index * rotate - rotate / 2
-		}deg)`;
-	};
+        /********** Hàm quay vòng quay **********/
+        const rotateWheel = (currentRotate, index) => {
+            $('.wheel').style.transform = `rotate(${
+                //=====< Góc quay hiện tại trừ góc của phần thưởng>=====
+                //=====< Trừ tiếp cho một nửa góc của 1 phần thưởng để đưa mũi tên về chính giữa >=====
+                // currentRotate - index * rotate - rotate / 4
+                currentRotate + (90 - rotate / 2) - index * rotate
+            }deg)`;
+        };
 
-	/********** Hàm lấy phần thưởng **********/
-	const getGift = randomNumber => {
-		let currentPercent = 0;
-		let list = [];
+        // const rotateWheel = (currentRotate, index) => {
+        //     const rotateTo = currentRotate - (90 - rotate / 2) - index * rotate;
+        //     $('.wheel').style.transform = `rotate(${rotateTo}deg)`;
+        // };
 
-		listGift.forEach((item, index) => {
-			//=====< Cộng lần lượt phần trăm trúng của các phần thưởng >=====
-			currentPercent += item.percent;
+        /********** Hàm lấy phần thưởng **********/
+        const getGift = randomNumber => {
+            let currentPercent = 0;
+            let list = [];
 
-			//=====< Số ngẫu nhiên nhỏ hơn hoặc bằng phần trăm hiện tại thì thêm phần thưởng vào danh sách >=====
-			if (randomNumber <= currentPercent) {
-				list.push({ ...item, index });
-			}
-		});
+            listGift.forEach((item, index) => {
+                //=====< Cộng lần lượt phần trăm trúng của các phần thưởng >=====
+                currentPercent += item.percent;
 
-		//=====< Phần thưởng đầu tiên trong danh sách là phần thưởng quay được>=====
-		return list[0];
-	};
+                //=====< Số ngẫu nhiên nhỏ hơn hoặc bằng phần trăm hiện tại thì thêm phần thưởng vào danh sách >=====
+                if (randomNumber <= currentPercent) {
+                    list.push({ ...item, index });
+                }
+            });
 
-	/********** In phần thưởng ra màn hình **********/
-	const showGift = gift => {
-		let timer = setTimeout(() => {
-			isRotating = false;
+            //=====< Phần thưởng đầu tiên trong danh sách là phần thưởng quay được>=====
+            return list[0];
+        };
 
-			showMsg.innerHTML = `Chúc mừng bạn đã nhận được "${gift.text}"`;
+        /********** In phần thưởng ra màn hình **********/
+        const showGift = gift => {
+            let timer = setTimeout(() => {
+                isRotating = false;
+                alert(`Chúc mừng bạn đã nhận được "${gift.text}"`)
+                // showMsg.innerHTML = `Chúc mừng bạn đã nhận được "${gift.text}"`;
 
-			clearTimeout(timer);
-		}, timeRotate);
-	};
+                clearTimeout(timer);
+            }, timeRotate);
+        };
 
-	/********** Sự kiện click button start **********/
-	btnWheel.addEventListener('click', () => {
-		!isRotating && start();
-	});
-})();
+        /********** Sự kiện click button start **********/
+        btnWheel.addEventListener('click', () => {
+            !isRotating && start();
+        });
+    })();
 
-// video
-const video = document.querySelector(".custom-video__video");
-const controls = document.querySelector(".custom-video__control");
+    // video
+    
+    const video = document.querySelector(".custom-video__video");
+    const controls = document.querySelector(".custom-video__control");
 
-video.addEventListener("click", function () {
-  if (controls.innerHTML === "▶") {
-	controls.innerHTML = "| |";
-	video.play();
-  } else {
-	controls.innerHTML = "▶";
-	video.pause();
-  }
-});
+    video.addEventListener("click", function () {
+        if (controls.innerHTML === '<i class="fas fa-play icon-play"></i>') {
+            controls.innerHTML = '<i class="fas fa-pause icon-pause"></i>';
+            video.play();
+        } else {
+            controls.innerHTML = '<i class="fas fa-play icon-play"></i>';
+            video.pause();
+        }
+    });
 
-video.addEventListener("mouseout", function () {
-  if (!video.paused) {
-	controls.style.display = "none";
-  }
-});
+    video.addEventListener("mouseout", function () {
+        if (!video.paused) {
+            controls.style.display = "none";
+        }
+    });
 
-video.addEventListener("mouseover", function () {
-  controls.style.display = "flex";
-});
+    video.addEventListener("mouseover", function () {
+        controls.style.display = "flex";
+    });
 
-video.addEventListener(
-  "ended",
-  function () {
-	controls.style.display = "flex";
-	controls.innerHTML = "▶";
-  },
-  false
-);
-
-
-
-
-
-
+    video.addEventListener(
+        "ended",
+        function () {
+            controls.style.display = "flex";
+            controls.innerHTML = '<i class="fas fa-play icon-play"></i>';
+        },
+        false
+    );
 
     </script>
 </body>
@@ -837,7 +842,6 @@ video.addEventListener(
 
 
 
-<!-- img đè video -->
 <!-- random -->
 
 

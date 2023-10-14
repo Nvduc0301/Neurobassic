@@ -1,13 +1,13 @@
-// random
-(() => {
+ // random
+ (() => {
 	const $ = document.querySelector.bind(document);
 
 	let timeRotate = 7000; //7 giây
 	let currentRotate = 0;
 	let isRotating = false;
 	const wheel = $('.wheel');
-	const btnWheel = $('.btn--wheel');
-	const showMsg = $('.msg');
+	const btnWheel = $('.btn-wheel');
+	// const showMsg = $('.msg');
 
 	//=====< Danh sách phần thưởng >=====
 	const listGift = [
@@ -62,17 +62,17 @@
 		//=====< Thêm background-color so le nhau và căn giữa cho các thẻ text>=====
 		if (index % 3 === 0) {
 			elm.innerHTML = `<p style="transform: skewY(${skewY}deg) rotate(${rotate / 2}deg);" class="text text-1">
-			  <b>${item.text}</b>
+			<b>${item.text}</b>
 			</p>`;
-		  } else if (index % 3 === 1) {
+		} else if (index % 3 === 1) {
 			elm.innerHTML = `<p style="transform: skewY(${skewY}deg) rotate(${rotate / 2}deg);" class="text text-2">
-			  <b>${item.text}</b>
+			<b>${item.text}</b>
 			</p>`;
-		  } else {
+		} else {
 			elm.innerHTML = `<p style="transform: skewY(${skewY}deg) rotate(${rotate / 2}deg);" class="text text-3">
-			  <b>${item.text}</b>
+			<b>${item.text}</b>
 			</p>`;
-		  }
+		}
 
 		//=====< Thêm vào thẻ ul >=====
 		wheel.appendChild(elm);
@@ -80,7 +80,7 @@
 
 	/********** Hàm bắt đầu **********/
 	const start = () => {
-		showMsg.innerHTML = '';
+		// showMsg.innerHTML = '';
 		isRotating = true;
 		//=====< Lấy 1 số ngầu nhiên 0 -> 1 >=====
 		const random = Math.random();
@@ -103,9 +103,15 @@
 		$('.wheel').style.transform = `rotate(${
 			//=====< Góc quay hiện tại trừ góc của phần thưởng>=====
 			//=====< Trừ tiếp cho một nửa góc của 1 phần thưởng để đưa mũi tên về chính giữa >=====
-			currentRotate - index * rotate - rotate / 2
+			// currentRotate - index * rotate - rotate / 4
+			currentRotate + (90 - rotate / 2) - index * rotate
 		}deg)`;
 	};
+
+	// const rotateWheel = (currentRotate, index) => {
+	//     const rotateTo = currentRotate - (90 - rotate / 2) - index * rotate;
+	//     $('.wheel').style.transform = `rotate(${rotateTo}deg)`;
+	// };
 
 	/********** Hàm lấy phần thưởng **********/
 	const getGift = randomNumber => {
@@ -130,8 +136,8 @@
 	const showGift = gift => {
 		let timer = setTimeout(() => {
 			isRotating = false;
-
-			showMsg.innerHTML = `Chúc mừng bạn đã nhận được "${gift.text}"`;
+			alert(`Chúc mừng bạn đã nhận được "${gift.text}"`)
+			// showMsg.innerHTML = `Chúc mừng bạn đã nhận được "${gift.text}"`;
 
 			clearTimeout(timer);
 		}, timeRotate);
@@ -142,3 +148,37 @@
 		!isRotating && start();
 	});
 })();
+
+// video
+
+const video = document.querySelector(".custom-video__video");
+const controls = document.querySelector(".custom-video__control");
+
+video.addEventListener("click", function () {
+	if (controls.innerHTML === '<i class="fas fa-play icon-play"></i>') {
+		controls.innerHTML = '<i class="fas fa-pause icon-pause"></i>';
+		video.play();
+	} else {
+		controls.innerHTML = '<i class="fas fa-play icon-play"></i>';
+		video.pause();
+	}
+});
+
+video.addEventListener("mouseout", function () {
+	if (!video.paused) {
+		controls.style.display = "none";
+	}
+});
+
+video.addEventListener("mouseover", function () {
+	controls.style.display = "flex";
+});
+
+video.addEventListener(
+	"ended",
+	function () {
+		controls.style.display = "flex";
+		controls.innerHTML = '<i class="fas fa-play icon-play"></i>';
+	},
+	false
+);

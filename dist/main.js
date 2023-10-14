@@ -83,27 +83,6 @@ const sendFooter = () => {
     }
 }
 
-// check send modal 
-const sendModal = () => {
-    var name = document.querySelector(".name-modal").value;
-    var phone = document.querySelector(".phone-modal").value;
-    var email = document.querySelector(".email-modal").value;
-    var content = document.querySelector(".content-modal").value;
-    
-
-    if (!name || !phone || !email || !content) {
-      alert("Vui lòng nhập đủ thông tin");
-    } else if (isNaN(phone)) {
-      alert("Số điện thoại phải là số");
-      document.querySelector(".phone-modal").value = "";
-    } else {
-      alert("Gửi thông tin thành công");
-      document.querySelector(".name-modal").value = "";
-      document.querySelector(".phone-modal").value = "";
-      document.querySelector(".email-modal").value = "";
-      document.querySelector(".content-modal").value = "";
-    }
-}
 
 // check share sick
 const shareSick = () => {
@@ -115,4 +94,27 @@ const shareSick = () => {
     document.querySelector(".share").value = "";
   }
 }
+
+
+// check send modal 
+// const sendModal = () => {
+//     var name = document.querySelector(".name-modal").value;
+//     var phone = document.querySelector(".phone-modal").value;
+//     var email = document.querySelector(".email-modal").value;
+//     var content = document.querySelector(".content-modal").value;
+    
+
+//     if (!name || !phone || !email || !content) {
+//       alert("Vui lòng nhập đủ thông tin");
+//     } else if (isNaN(phone)) {
+//       alert("Số điện thoại phải là số");
+//       document.querySelector(".phone-modal").value = "";
+//     } else {
+//       alert("Gửi thông tin thành công");
+//       document.querySelector(".name-modal").value = "";
+//       document.querySelector(".phone-modal").value = "";
+//       document.querySelector(".email-modal").value = "";
+//       document.querySelector(".content-modal").value = "";
+//     }
+// }
 
