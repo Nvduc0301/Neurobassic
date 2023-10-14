@@ -16,7 +16,7 @@
 </head>
 <body>
     <!-- header -->
-    <section>
+    <header>
         <div class="bg-[#6E2C91] h-8">
             <div class="container h-full text-white">
                 <a href="tel:0588227799" class="flex justify-end items-center h-full text-sm">
@@ -40,7 +40,7 @@
                 <div class="text-sm font-medium lg:text-lg text-white lg:ml-11 lg:mr-[4.625rem] mx-4 lg:mx-0 whitespace-nowrap hover:cursor-pointer">Liên hệ ngay</div>
             </a>
         </div>     
-    </section>
+    </header>
 
     <!-- banner -->
     <section>
@@ -112,7 +112,9 @@
                         <source src="dist/img/BVPD.mp4" type="video/mp4" />
                         Your browser does not support the video tag.
                     </video>
-                    <div class="custom-video__control">▶</div>
+                    <div class="custom-video__control" >
+                        <img src="dist/img/video_pause-icon.png" alt="">
+                    </div>
                         <!-- <div class="bg-[#FFFFFF26] flex justify-center items-center rounded-full top-1/2 z-20 left-1/2 min-w-[6.875rem] min-h-[6.875rem]">
                             ▶
                         </div>
@@ -545,10 +547,12 @@
                 <div class="random">
                     <ul class="wheel "></ul>
                 </div>
-                <button class="btn--wheel">Bấm nút quay</button>
+                <button class="btn-wheel hover:border-[1px] hover:border-solid hover:border-[#6E2C91] hover:text-transparent hover:bg-clip-text hover:cursor-pointer bg-gradient-to-b from-[#FF41F7] to-[#6E2C91] mb-7 rounded-full text-sm lg:text-lg lg:max-w-[19rem] max-w-[15rem] font-medium text-center text-white py-3 lg:py-4">Bấm nút quay</button>
+
+                <!-- <button class="btn-wheel">Bấm nút quay</button> -->
                 <h1 class="msg"></h1>
             </div>
-            <div class="md:py-9 py-4 max-h-[23.25rem] sm:w-2/3 mx-auto rounded-xl text-white font-semibold text-center" style="background-image: linear-gradient(to bottom, rgb(255, 64, 245), rgb(109, 43, 145)), url('dist/img/ramdom_time-bg.png'); background-size: contain; background-repeat: no-repeat;" >
+            <div class="md:py-9 py-4 max-h-[23.25rem] sm:w-2/3 mx-auto rounded-xl text-white font-semibold text-center" style="background-image: linear-gradient(to bottom, rgba(255, 64, 245, 0.8), rgba(109, 43, 145, 0.8)), url('dist/img/ramdom_time-bg.png'); background-size: contain; background-repeat: no-repeat;" >
                 <div class="text-xl lg:text-[4rem] lg:leading-[6rem] border-[#fff]  border-b-[0.0625rem] mx-[4.5rem]">VÒNG QUAY MAY MẮN</div>
                 <div class="text-2xl lg:text-3xl mt-4">QUÀ TẶNG LÊN ĐẾN 80%</div>
                 <!-- <div class="mt-4 md:mb-9"> -->
@@ -651,7 +655,7 @@
 	let currentRotate = 0;
 	let isRotating = false;
 	const wheel = $('.wheel');
-	const btnWheel = $('.btn--wheel');
+	const btnWheel = $('.btn-wheel');
 	const showMsg = $('.msg');
 
 	//=====< Danh sách phần thưởng >=====

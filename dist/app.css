@@ -17,6 +17,11 @@ body {
   /* font-family:; */
 }
 
+header {
+	max-width: 1920px;
+	margin: 0 auto;
+}
+
 section {
   max-width: 1920px;
   margin: 0 auto;
@@ -218,21 +223,19 @@ video::-webkit-media-controls {
 	background-color: #ff4cf8;
 }
 
-button {
+.btn-wheel {
 	display: inline-block;
 	text-align: center;
 	border: 0;
-	background-color: #333;
+	/* background: linear-gradient(180deg, #FF41F7 0%, #6E2C91 100%); */
 	color: #fff;
 	font-size: 1.5rem;
 	border-radius: 4rem;
-	padding: 0.5rem 1.5rem;
+	padding: 1rem 5rem;
 	width: auto;
 	cursor: pointer;
 	outline: none;
+	white-space: nowrap;
 }
 
-button:hover {
-	opacity: 0.8;
-}
 
