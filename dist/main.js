@@ -1,3 +1,68 @@
+// const video = document.querySelector(".custom-video__video");
+// const controls = document.querySelector(".custom-video__control");
+
+// video.addEventListener("click", function () {
+//   if (controls.innerHTML === "▶") {
+// 	controls.innerHTML = "| |";
+// 	video.play();
+//   } else {
+// 	controls.innerHTML = "▶";
+// 	video.pause();
+//   }
+// });
+
+// video.addEventListener("mouseout", function () {
+//   if (!video.paused) {
+// 	controls.style.display = "none";
+//   }
+// });
+
+// video.addEventListener("mouseover", function () {
+//   controls.style.display = "flex";
+// });
+
+// video.addEventListener(
+//   "ended",
+//   function () {
+// 	controls.style.display = "flex";
+// 	controls.innerHTML = "▶";
+//   },
+//   false
+// );
+
+// coutdown
+function countTime(hours, minutes, seconds) {
+	var hoursDiv =  document.getElementById("hours") 
+	var minutesDiv =  document.getElementById("minutes") 
+	var secondsDiv =  document.getElementById("seconds") 
+
+	var totalMilliseconds = ((hours * 60 * 60) + (minutes * 60) + seconds) * 1000;
+  
+	var countdown = setInterval(function() {
+	  totalMilliseconds -= 1000;
+  
+	  if (totalMilliseconds <= 0) {
+		clearInterval(countdown);
+		hoursDiv.innerHTML = "00";
+		minutesDiv.innerHTML = "00";
+		secondsDiv.innerHTML = "00";
+		console.log("Time is up!");
+	  } else {
+		var hoursLeft = Math.floor(totalMilliseconds / (1000 * 60 * 60));
+		var minutesLeft = Math.floor((totalMilliseconds % (1000 * 60 * 60)) / (1000 * 60));
+		var secondsLeft = Math.floor((totalMilliseconds % (1000 * 60)) / 1000);
+  
+		document.getElementById("hours").innerHTML = hoursLeft < 10 ? "0" + hoursLeft : hoursLeft;
+		document.getElementById("minutes").innerHTML = minutesLeft < 10 ? "0" + minutesLeft : minutesLeft;
+		document.getElementById("seconds").innerHTML = secondsLeft < 10 ? "0" + secondsLeft : secondsLeft;
+	  }
+	}, 1000);
+} 
+
+countTime(6, 0, 0);
+
+// sendFooter  
+
 const sendFooter = () => {
     var name = document.querySelector(".name-footer").value;
     var phone = document.querySelector(".phone-footer").value;
@@ -40,6 +105,7 @@ const sendModal = () => {
     }
 }
 
+// check share sick
 const shareSick = () => {
   var share = document.querySelector(".share").value;
   if (!share) {
@@ -49,42 +115,4 @@ const shareSick = () => {
     document.querySelector(".share").value = "";
   }
 }
-
-
-// modal click sign
-
-const setupModal = () => {
-  const buyBtns = document.querySelectorAll('.btn-sign');
-  const modal = document.querySelector('.js-modal');
-  const modalcontainer = document.querySelector('.js-modal-container');
-  const modalclose = document.querySelector('.js-modal-close');
-
-  const showBuyTickets = () => {
-    modal.classList.add('flex');
-    modal.classList.remove('hidden')
-  };
-
-  const hideBuyTickets = () => {
-    modal.classList.remove('flex');
-    modal.classList.add('hidden');
-
-  };
-
-  const stopPropagation = (event) => {
-    event.stopPropagation();
-  };
-
-  buyBtns.forEach((buyBtn) => {
-    buyBtn.onclick = showBuyTickets;
-  });
-
-  modalclose.onclick = hideBuyTickets;
-  modal.onclick = hideBuyTickets;
-  modalcontainer.onclick = stopPropagation; 
-};
-
-setupModal();
-
-
-
 

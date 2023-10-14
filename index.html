@@ -3,10 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bệnh viện Phương Đông</title>
+    <title>NeuroBasic</title>
     <link rel="stylesheet" href="dist/style.css">
     <link rel="stylesheet" href="dist/app.css">
     <script src="dist/main.js" type="text/javascript" ></script>
+    <!-- <script src="dist/ramdom.js" type="text/javascript" ></script> -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
     <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -29,16 +30,14 @@
         </div>  
         <div class="container flex justify-between items-center ">
             <div class="flex items-center my-3">
-                <div class="">
+                <a href="#">
                     <img src="dist/img/header_logo.png" alt="">
-                </div>
+                </a>
                 <!-- <div class="ml-4 text-3xl font-light"><span class="font-semibold">Neuro</span>Basic</div> -->
             </div>
             <a href="tel:0588227799" class="flex items-center bg-gradient-to-b from-[#FF41F7] to-[#6E2C91] rounded-full p-1 sm:p-[0.375rem]">
-                <div class="w-8">
-                    <img src="dist/img/header_phone-icon2.png" alt="">
-                </div>
-                <div class="text-sm lg:text-lg text-white lg:ml-11 lg:mr-[4.625rem] mx-4 lg:mx-0 whitespace-nowrap hover:cursor-pointer">Liên hệ ngay</div>
+                <span class="w-8 h-8 bg-no-repeat bg-contain shrink-0 mr-1" style="background-image: url(dist/img/header_phone-icon2.png);"></span>
+                <div class="text-sm font-medium lg:text-lg text-white lg:ml-11 lg:mr-[4.625rem] mx-4 lg:mx-0 whitespace-nowrap hover:cursor-pointer">Liên hệ ngay</div>
             </a>
         </div>     
     </section>
@@ -88,8 +87,9 @@
                             <span class="ml-2 text-[#858585]">Giúp cải thiện tuần hoàn máu não và tuần hoàn máu ngoại vi, tăng cường lưu thông máu.</span>
                         </div>
                     </div>
-                    <div class="mb-2 font-medium text-sm">Sản phẩm là thực phẩm bảo vệ sức khoẻ, không phải là thuốc, không có tác dụng thay thế thuốc chữa bệnh.</div>
-                    <a href="tel:0588227799"  class="bg-gradient-to-b from-[#FF41F7] to-[#6E2C91] mb-7 rounded-full text-sm lg:text-lg lg:max-w-[19rem] max-w-[15rem] text-center text-white py-3 lg:py-4 hover:cursor-pointer">Liên hệ ngay</a>
+                    <div class="mb-2 font-medium text-sm">Sản phẩm là <span class="underline">thực phẩm bảo vệ sức khoẻ</span>, không phải là thuốc, không có tác dụng thay thế thuốc chữa bệnh.</div>
+                    <!-- hover:bg-white hover:bg-gradient-to-b hover:from-[#FF41F7] hover:to-[#6E2C91] hover:text-transparent hover:bg-clip-text -->
+                    <a href="tel:0588227799"  class="hover:border-[1px] hover:border-solid hover:border-[#6E2C91] hover:text-transparent hover:bg-clip-text hover:cursor-pointer bg-gradient-to-b from-[#FF41F7] to-[#6E2C91] mb-7 rounded-full text-sm lg:text-lg lg:max-w-[19rem] max-w-[15rem] font-medium text-center text-white py-3 lg:py-4">Liên hệ ngay</a>
                 </div>
                 <div class="hidden lg:flex items-end w-1/2 ml-16 css_img">
                     <img src="dist/img/banner-img-nurse.png" alt="">
@@ -103,13 +103,22 @@
         <div class="lg:mt-20 mt-10 flex">
             <div class="container">
                 <div class="text-center lg:text-3xl text-2xl font-medium">Bệnh tai biến mạch máu não – Bạn cần biết</div>
-                <div class="mt-4">
-                    <!-- <img src="dist/img/sample_video.png" alt=""> -->
+                <div class="mt-4 relative">
                     <!-- autoplay="" -->
-                    <video id="myVideo"   loop="" playsinline="" controls class="lg:rounded-[1.875rem] rounded">
-                        <source src="dist/img/BVPD.mp4" type="video/mp4">
+
+                    <!-- <div class=" h-full absolute w-full z-10" style="background-image: url('dist/img/sample_video.png');background-repeat: no-repeat;">
+                    </div> -->
+                    <video class="custom-video__video" width="100%" height="auto" muted>
+                        <source src="dist/img/BVPD.mp4" type="video/mp4" />
                         Your browser does not support the video tag.
                     </video>
+                    <div class="custom-video__control">▶</div>
+                        <!-- <div class="bg-[#FFFFFF26] flex justify-center items-center rounded-full top-1/2 z-20 left-1/2 min-w-[6.875rem] min-h-[6.875rem]">
+                            ▶
+                        </div>
+                    <video id="myVideo"   loop="" playsinline="" controls class="lg:rounded-[1.875rem] rounded">
+                        <source src="dist/img/BVPD.mp4" type="video/mp4">
+                    </video> -->
                 </div>
             </div>
             <!-- <div class="bg-gradient-to-b from-[#FF41F7] to-[#6E2C91] rounded-full text-[1.125rem] max-w-[19rem] text-center text-white py-4">Liên hệ ngay</div> -->
@@ -118,58 +127,49 @@
 
     <!-- define -->
     <section>
-        <div class="bg-[#9c79a5] sm:bg-[url(img/detail_bg.png)] bg-no-repeat my-16 text-center">
+        <div class="bg-[#9c79a5] md:bg-[url(img/detail_bg.png)] bg-no-repeat my-16 text-center">
             <div class="container">
                 <div class="pt-7 font-medium text-2xl lg:text-3xl text-white">Neurobasic – Sản phẩm hữu ích dành cho sức khoẻ</div>
                 <div class="mt-4 text-sm text-white max-w-[68rem]">Neurobasic là thực phẩm bảo vệ sức khỏe, thuộc nhóm hỗ trợ trí não, được sản xuất tại Công Ty TNHH Starphar, Việt Nam. Sản phẩm được bào chế dưới dạng viên, dùng trực tiếp bằng đường uống, thích hợp sử dụng cho người gặp các vấn đề về thiểu năng tuần hoàn não, rối loạn trí nhớ</div>
-                <div class="sm:flex gap-4 sm:gap-9 my-4 sm:my-8">
-                    <div class="cursor-pointer sm:w-1/3 mx-auto flex flex-col items-center rounded-xl hover:bg-gradient-to-b from-[#FF41F7] to-[#6E2C91] bg-white h-[17.5rem] max-w-[26rem]">
-                        <div class="mt-7">
-                            <img src="dist/img/detail_icon-confirm.png" alt="">
-                        </div>
+                <div class="md:flex gap-4 md:gap-9 my-4 md:my-8">
+                    <!-- hover:text-white hover:bg-gradient-to-b from-[#FF41F7] to-[#6E2C91] -->
+                    <div class="change-bg cursor-pointer mx-auto md:w-1/3 mx-ato flex flex-col items-center rounded-xl  bg-white  min-h-[15rem] md:min-h-[17.5rem] max-w-[26rem]">
+                        <span class="mt-6 w-14 h-14 bg-no-repeat bg-contain shrink-0 mr-1" style="background-image: url(dist/img/detail_icon-confirm.png);"></span>
                         <div class="flex flex-col flex-1 mx-5">
                             <div class="font-bold text-sm lg:text-lg my-4">Gia tăng sự tỉnh táo và tập trung</div>
-                            <div class="sm:mb-7 text-sm">Làm tăng lưu lượng máu đến não và làm tặng sự 
+                            <div class="md:mb-7 text-sm">Làm tăng lưu lượng máu đến não và làm tặng sự 
                                 tỉnh táo tập trung</div>
                         </div>
                     </div>
-                    <div class="cursor-pointer sm:w-1/3 mx-auto my-4 sm:my-0 flex flex-col items-center rounded-xl hover:bg-gradient-to-b from-[#FF41F7] to-[#6E2C91] bg-white h-[17.5rem] max-w-[26rem]">
-                        <div class="mt-7">
-                            <img src="dist/img/detail_icon-confirm.png" alt="">
-                        </div>
+                    <div class="change-bg cursor-pointer mx-auto md:w-1/3 mx-ato my-4 md:my-0 flex flex-col items-center rounded-xl bg-white min-h-[15rem] md:min-h-[17.5rem] max-w-[26rem]">
+                        <span class="mt-6 w-14 h-14 bg-no-repeat bg-contain shrink-0 mr-1" style="background-image: url(dist/img/detail_icon-confirm.png);"></span>
                         <div class="flex flex-col flex-1 mx-5">
                             <div class="font-bold text-sm lg:text-lg my-4">Hỗ trợ tăng cường trí nhớ</div>
-                            <div class="sm:mb-7 text-sm">Điều hòa hoạt động và chức năng tế bào thần kinh, giúp duy trì sự ổn định cả lưu lượng máu đến não</div>
+                            <div class="md:mb-7 text-sm">Điều hòa hoạt động và chức năng tế bào thần kinh, giúp duy trì sự ổn định cả lưu lượng máu đến não</div>
                         </div>
                     </div>
-                    <div class="cursor-pointer sm:w-1/3 mx-auto flex flex-col items-center rounded-xl hover:bg-gradient-to-b from-[#FF41F7] to-[#6E2C91] bg-white h-[17.5rem] max-w-[26rem]">
-                        <div class="mt-7">
-                            <img src="dist/img/detail_icon-confirm.png" alt="">
-                        </div>
+                    <div class="change-bg cursor-pointer mx-auto md:w-1/3 mx-ato flex flex-col items-center rounded-xl bg-white min-h-[15rem] md:min-h-[17.5rem] max-w-[26rem]">
+                        <span class="mt-6 w-14 h-14 bg-no-repeat bg-contain shrink-0 mr-1" style="background-image: url(dist/img/detail_icon-confirm.png);"></span>
                         <div class="flex flex-col flex-1 mx-5">
                             <div class="font-bold text-sm lg:text-lg my-4">Tăng cường lưu thông máu</div>
-                            <div class="sm:mb-7 text-sm">Tăng vận chuyển oxy và máu đến não để ngừa tình trạng co mạch, giúp não hoạt động tốt.</div>
+                            <div class="md:mb-7 text-sm">Tăng vận chuyển oxy và máu đến não để ngừa tình trạng co mạch, giúp não hoạt động tốt.</div>
                         </div>
                     </div>
                 </div>
 
-                <div class="sm:flex justify-center gap-8 pb-12">
-                    <div class="cursor-pointer sm:w-1/3 lg:w-1/2 mx-auto sm:mx-0 flex flex-col items-center rounded-xl hover:bg-gradient-to-b from-[#FF41F7] to-[#6E2C91] bg-white h-[17.5rem] max-w-[26rem]">
-                        <div class="mt-7">
-                            <img src="dist/img/detail_icon-confirm.png" alt="">
-                        </div>
+                <div class="md:flex justify-center gap-8 pb-12">
+                    <div class="change-bg cursor-pointer md:w-1/3 mx-auto md:mx-0 flex flex-col items-center rounded-xl bg-white min-h-[15rem] md:min-h-[17.5rem] max-w-[26rem]">
+                        <span class="mt-6 w-14 h-14 bg-no-repeat bg-contain shrink-0 mr-1" style="background-image: url(dist/img/detail_icon-confirm.png);"></span>
                         <div class="flex flex-col flex-1 mx-5">
                             <div class="font-bold text-sm lg:text-lg my-4 min-h-[3.5rem]">Hỗ trợ giảm căng thẳng, giảm triệu chứng lo âu và cải thiện tâm trạng</div>
-                            <div class="sm:mb-7 text-sm">Hỗ trợ phục hồi tổn thương ở não mức độ nhẹ, giúp hạn chế triệu chứng chóng mặt, đau đầu, giúp tăng cường trí nhớ để học tập và làm việc hiệu quả.</div>
+                            <div class="md:mb-7 text-sm">Hỗ trợ phục hồi tổn thương ở não mức độ nhẹ, giúp hạn chế triệu chứng chóng mặt, đau đầu, giúp tăng cường trí nhớ để học tập và làm việc hiệu quả.</div>
                         </div>
                     </div>
-                    <div class="cursor-pointer sm:w-1/3 lg:sm:w-1/2 mx-auto sm:mx-0 flex flex-col items-center sm:mt-0 mt-4 rounded-xl hover:bg-gradient-to-b from-[#FF41F7] to-[#6E2C91] bg-white h-[17.5rem] max-w-[26rem]">
-                        <div class="mt-7">
-                            <img src="dist/img/detail_icon-confirm.png" alt="">
-                        </div>
+                    <div class="change-bg cursor-pointer md:w-1/3 mx-auto md:mx-0 flex flex-col items-center md:mt-0 mt-4 rounded-xl bg-white min-h-[15rem] md:min-h-[17.5rem] max-w-[26rem]">
+                        <span class="mt-6 w-14 h-14 bg-no-repeat bg-contain shrink-0 mr-1" style="background-image: url(dist/img/detail_icon-confirm.png);"></span>
                         <div class="flex flex-col flex-1 mx-5">
                             <div class="font-bold text-sm lg:text-lg my-4 min-h-[3.5rem]">Gia tăng giấc ngủ ngon</div>
-                            <div class="sm:mb-7 text-sm">Tăng tuần hoàn máu não, giúp não bộ được thư giãn, giảm các tình trạng lo âu, căng thẳng,ngủ ngon.</div>
+                            <div class="md:mb-7 text-sm">Tăng tuần hoàn máu não, giúp não bộ được thư giãn, giảm các tình trạng lo âu, căng thẳng,ngủ ngon.</div>
                         </div>
                     </div>
                 </div>
@@ -180,56 +180,54 @@
     <!-- price -->
     <section>
         <div class="container md:flex gap-8">
-            <div class="md:w-1/2 lg:w-1/3">
+            <div class="md:w-1/3">
                 <div class="text-[#792D99] text-4xl lg:text-[4.125rem] lg:leading-[6.5rem]"><span class="font-bold ">NEURO</span>Basic</div>
                 <div class="mt-2 font-medium text-2xl lg:text-3xl tracking-wide">650.00VND</div>
                 <div class="text-[#858585] text-sm mt-4">Neurobasic là thực phẩm bảo vệ sức khỏe, thuộc nhóm hỗ trợ trí não, được sản xuất tại Công Ty TNHH Starphar, Việt Nam. Sản phẩm được bào chế dưới dạng viên, dùng trực tiếp bằng đường uống, thích hợp sử dụng cho người gặp các vấn đề về thiểu năng tuần hoàn não, rối loạn trí nhớ</div>
                 <div class="flex md:justify-between mt-10">
-                    <div class="cursor-pointer">
-                        <img src="dist/img/price_icon-hand.png" alt="">
-                    </div>
-                    <a href="tel:0588227799" class="btn-sign w-full flex items-center justify-center bg-gradient-to-b from-[#FF41F7] to-[#6E2C91] rounded-full text-sm lg:text-lg max-w-[19rem] text-center text-white py-3 lg:py-4 ml-2 hover:cursor-pointer">Mua ngay</a>
+                    <span class="togglego w-14 h-14 cursor-pointer bg-no-repeat bg-contain shrink-0 mr-1" style="background-image: url(dist/img/price_icon-hand.png);"></span>
+                    <a href="tel:0588227799" class="btn-sign hover:border-[1px] hover:border-solid hover:border-[#6E2C91] hover:text-transparent hover:bg-clip-text font-medium w-full flex items-center justify-center bg-gradient-to-b from-[#FF41F7] to-[#6E2C91] rounded-full text-sm lg:text-lg max-w-[19rem] text-center text-white py-3 lg:py-4 ml-4 hover:cursor-pointer">Mua ngay</a>
                 </div>
             </div>
-            <div class="hidden lg:flex w-1/3">
+            <div class="flex md:w-1/3 mx-auto css_img justify-center my-4 md:my-0">
                 <img src="dist/img/Price_img-medi.png" alt="">
             </div>
-            <div class="md:w-1/2 lg:w-1/3 flex flex-col justify-center gap-6 mt-4 md:mt-0">
+            <div class="md:w-1/3 flex flex-col justify-center gap-6 mt-4 md:mt-0">
                 <div class="bg-gradient-to-r from-[#FF41F7] to-[#6E2C91] cursor-pointer rounded-full flex">
-                    <div class="ml-2 my-2 flex items-center">
+                    <div class="ml-2 my-2 flex items-center css_img">
                         <img src="dist/img/price_img-user1.png" alt="">
                     </div>
-                    <div class="text-white ml-8 flex flex-col justify-center">
-                        <div class="font-medium tracking-wide">CÔ LÊ THỊ VÂN - 62 TUỔI</div>
+                    <div class="text-white mx-6 flex flex-col justify-center">
+                        <div class="font-medium text-sm lg:text-base tracking-wide">CÔ LÊ THỊ VÂN - 62 TUỔI</div>
                         <div class="text-xs">Thật tuyệt vời khi biết đến sản
                             phẩm này</div>
                     </div>
                 </div>
                 <div class="bg-gradient-to-r from-[#FF41F7] to-[#6E2C91] cursor-pointer rounded-full flex">
-                    <div class="ml-2 my-2 flex items-center">
+                    <div class="ml-2 my-2 flex items-center css_img">
                         <img src="dist/img/price_img-user2.png" alt="">
                     </div>
-                    <div class="text-white ml-8 flex flex-col justify-center">
-                        <div class="font-medium tracking-wide">CHÚ HOÀNG THÁI TUẤN - 45 TUỔI</div>
+                    <div class="text-white mx-6 flex flex-col justify-center">
+                        <div class="font-medium text-sm lg:text-base tracking-wide">CHÚ HOÀNG THÁI TUẤN - 45 TUỔI</div>
                         <div class="text-xs">Thật tuyệt vời khi biết đến sản
                             phẩm này</div>
                     </div>
                 </div>
                 <div class="bg-gradient-to-r from-[#FF41F7] to-[#6E2C91] cursor-pointer rounded-full flex">
-                    <div class="ml-2 my-2 flex items-center">
+                    <div class="ml-2 my-2 flex items-center css_img">
                         <img src="dist/img/price_img-user3.png" alt="">
                     </div>
-                    <div class="text-white ml-8 flex flex-col justify-center">
-                        <div class="font-medium tracking-wide">CHÚ NGUYỄN VĂN TÂN - 65 TUỔI</div>
+                    <div class="text-white mx-6 flex flex-col justify-center">
+                        <div class="font-medium text-sm lg:text-base tracking-wide">CHÚ NGUYỄN VĂN TÂN - 65 TUỔI</div>
                         <div class="text-xs">Thật tuyệt vời khi biết đến sản phẩm này</div>
                     </div>
                 </div>
                 <div class="bg-gradient-to-r from-[#FF41F7] to-[#6E2C91] cursor-pointer rounded-full flex">
-                    <div class="ml-2 my-2 flex items-center">
+                    <div class="ml-2 my-2 flex items-center css_img">
                         <img src="dist/img/price_img-user4.png" alt="">
                     </div>
-                    <div class="text-white ml-8 flex flex-col justify-center">
-                        <div class="font-medium tracking-wide">CÔ NGUYỄN THÚY HÀ - 50 TUỔI</div>
+                    <div class="text-white mx-6 flex flex-col justify-center">
+                        <div class="font-medium text-sm lg:text-base tracking-wide">CÔ NGUYỄN THÚY HÀ - 50 TUỔI</div>
                         <div class="text-xs">Thật tuyệt vời khi biết đến sản
                             phẩm này</div>
                     </div>
@@ -244,10 +242,12 @@
             <div class="container">
                 <div class="font-medium text-2xl lg:text-3xl text-center">Những người có nguy cơ sủy giảm trí nhớ cao</div>
                 <div class="md:flex gap-4 lg:gap-9 my-8">
-                    <div class="w-full mx-auto md:w-1/3 bg-gradient-to-b  from-[#FF41F7] to-[#6E2C91] cursor-pointer rounded-xl max-h-[26rem] max-w-[26rem]">
+                    <div class="w-full mx-auto md:w-1/3 bg-gradient-to-b  from-[#FF41F7] to-[#6E2C91] cursor-pointer rounded-xl min-h-[26rem] max-w-[26rem]">
                         <div class="m-6 flex flex-col items-center rounded-xl">
-                            <div class="rounded mt-6 md:mt-0">
-                                <img src="dist/img/human_img-1.jpg" alt="">
+                            <div class="rounded mt-6 md:mt-0 overflow-hidden">
+                                <div class="relative">
+                                    <img src="dist/img/human_img-1.jpg" alt="Ảnh" class="w-full h-full transition-transform duration-300 transform-gpu hover:scale-125 origin-center">
+                                </div>
                             </div>
                             <div class="flex flex-col flex-1 text-white">
                                 <div class="font-bold text-base lg:text-lg my-2 text-center">PHỤ NỮ SAU SINH</div>
@@ -256,10 +256,12 @@
                             </div>
                         </div>
                     </div>
-                    <div class="w-full mx-auto md:w-1/3 bg-gradient-to-b  from-[#FF41F7] to-[#6E2C91] cursor-pointer rounded-xl max-h-[26rem] max-w-[26rem]">
+                    <div class="w-full mx-auto md:w-1/3 bg-gradient-to-b  from-[#FF41F7] to-[#6E2C91] cursor-pointer rounded-xl min-h-[26rem] max-w-[26rem]">
                         <div class="m-6 flex flex-col items-center rounded-xl">
-                            <div class="rounded mt-6 md:mt-0">
-                                <img src="dist/img/human_img-2.jpg" alt="">
+                            <div class="rounded mt-6 md:mt-0 overflow-hidden">
+                                <div class="relative">
+                                    <img src="dist/img/human_img-2.jpg" alt="Ảnh" class="w-full h-full transition-transform duration-300 transform-gpu hover:scale-125 origin-center">
+                                </div>
                             </div>
                             <div class="flex flex-col flex-1 text-white">
                                 <div class="font-bold text-base lg:text-lg my-2 text-center">CHỊU NHIỀU ÁP LỰC</div>
@@ -268,10 +270,12 @@
                             </div>
                         </div>
                     </div>
-                    <div class="w-full mx-auto md:w-1/3 bg-gradient-to-b  from-[#FF41F7] to-[#6E2C91] cursor-pointer rounded-xl max-h-[26rem] max-w-[26rem]">
+                    <div class="w-full mx-auto md:w-1/3 bg-gradient-to-b  from-[#FF41F7] to-[#6E2C91] cursor-pointer rounded-xl min-h-[26rem] max-w-[26rem]">
                         <div class="m-6 flex flex-col items-center rounded-xl">
-                            <div class="rounded mt-6 md:mt-0">
-                                <img src="dist/img/human_img-3.jpg" alt="">
+                            <div class="rounded mt-6 md:mt-0 overflow-hidden">
+                                <div class="relative">
+                                    <img src="dist/img/human_img-3.jpg" alt="Ảnh" class="w-full h-full transition-transform duration-300 transform-gpu hover:scale-125 origin-center">
+                                </div>
                             </div>
                             <div class="flex flex-col flex-1 text-white">
                                 <div class="font-bold text-base lg:text-lg my-2 text-center">TỔN THƯƠNG NÃO</div>
@@ -282,10 +286,12 @@
                 </div>
     
                 <div class="md:flex justify-center gap-8 lg:pb-12">
-                    <div class="md:w-1/2 mx-auto md:mx-0 bg-gradient-to-b  from-[#FF41F7] to-[#6E2C91] cursor-pointer rounded-xl max-h-[26rem] max-w-[26rem]">
+                    <div class="md:w-1/3 mx-auto md:mx-0 bg-gradient-to-b  from-[#FF41F7] to-[#6E2C91] cursor-pointer rounded-xl min-h-[26rem] max-w-[26rem]">
                         <div class="m-6 flex flex-col items-center rounded-xl">
-                            <div class="rounded mt-6 md:mt-0">
-                                <img src="dist/img/human_img-4.jpg" alt="">
+                            <div class="rounded mt-6 md:mt-0 overflow-hidden">
+                                <div class="relative">
+                                    <img src="dist/img/human_img-4.jpg" alt="Ảnh" class="w-full h-full transition-transform duration-300 transform-gpu hover:scale-125 origin-center">
+                                </div>
                             </div>
                             <div class="flex flex-col flex-1 text-white">
                                 <div class="font-bold text-base lg:text-lg my-2 text-center">RƯỢU BIA , THUỐC LÁ</div>
@@ -293,10 +299,12 @@
                             </div>
                         </div>
                     </div>
-                    <div class="md:w-1/2 mx-auto md:mx-0 bg-gradient-to-b  from-[#FF41F7] to-[#6E2C91] cursor-pointer rounded-xl max-h-[26rem] max-w-[26rem]">
+                    <div class="md:w-1/3 mx-auto md:mx-0 bg-gradient-to-b  from-[#FF41F7] to-[#6E2C91] cursor-pointer rounded-xl min-h-[26rem] max-w-[26rem]">
                         <div class="m-6 flex flex-col items-center rounded-xl">
-                            <div class="rounded mt-6 md:mt-0">
-                                <img src="dist/img/human_img-5.png" alt="">
+                            <div class="rounded mt-6 md:mt-0 overflow-hidden">
+                                <div class="relative">
+                                    <img src="dist/img/human_img-5.png" alt="Ảnh" class="w-full h-full transition-transform duration-300 transform-gpu hover:scale-125 origin-center">
+                                </div>
                             </div>
                             <div class="flex flex-col flex-1 text-white">
                                 <div class="font-bold text-base lg:text-lg my-2 text-center">NHÂN VIÊN VĂN PHÒNG</div>
@@ -318,32 +326,24 @@
                     <div class="font-medium text-2xl lg:text-3xl max-w-[28.5rem]">Bạn hãy chia sẻ những triệu chứng bạn mắc phải nhé:</div>
                     <div class="flex flex-col gap-6 mt-4 lg:mt-0">
                         <div class="flex">
-                            <div class="">
-                                <img src="dist/img/share_icon-hand.png" alt="">
-                            </div>
+                            <span class="icon w-6 h-6 bg-no-repeat bg-contain shrink-0 mr-1" style="background-image: url(dist/img/share_icon-hand.png);"></span>
                             <div class="font-semibold ml-4">Thiếu tập trung, lơ đãng trong công việc và học tập</div>
                         </div>
                         <div class="flex">
-                            <div class="">
-                                <img src="dist/img/share_icon-hand.png" alt="">
-                            </div>
+                            <span class="icon w-6 h-6 bg-no-repeat bg-contain shrink-0 mr-1" style="background-image: url(dist/img/share_icon-hand.png);"></span>
                             <div class="font-semibold ml-4">Thường xuyên thấy mệt mỏi, căng thẳng, stress</div>
                         </div>
                         <div class="flex">
-                            <div class="">
-                                <img src="dist/img/share_icon-hand.png" alt="">
-                            </div>
+                            <span class="icon w-6 h-6 bg-no-repeat bg-contain shrink-0 mr-1" style="background-image: url(dist/img/share_icon-hand.png);"></span>
                             <div class="font-semibold ml-4">Khó ghi nhớ một thông tin, sự kiện, bài học mới.</div>
                         </div>
                         <div class="flex">
-                            <div class="">
-                                <img src="dist/img/share_icon-hand.png" alt="">
-                            </div>
+                            <span class="icon w-6 h-6 bg-no-repeat bg-contain shrink-0 mr-1" style="background-image: url(dist/img/share_icon-hand.png);"></span>
                             <div class="font-semibold ml-4">Triệu chứng khác:</div>
                         </div>
                     </div>
-                    <div class="relative mt-4 lg:mt-0 mb-4 md:mb-0">
-                        <input class="share border-[#D6D0D0] w-full border-b-[0.0625rem] bg-transparent outline-none rounded-[0.0625rem]" type="text" placeholder="Chia sẻ triệu chứng của bạn với chúng tôi để có giải pháp tốt nhất...">
+                    <div class="relative mt-4 lg:mt-0 mb-4 lg:mb-0">
+                        <input class="share border-[#D6D0D0] cursor-pointer w-full border-b-[0.0625rem] bg-transparent outline-none rounded-[0.0625rem]" type="text" placeholder="Chia sẻ triệu chứng của bạn với chúng tôi để có giải pháp tốt nhất...">
                         <div onclick="shareSick()" class="absolute top-[-50%] right-0">
                             <img src="dist/img/share_icon-fly.png" alt="">
                         </div>
@@ -393,7 +393,7 @@
         <div class="bg-[#faebfb] bg-center">
             <div class="container">
                 <div class="font-medium text-2xl lg:text-3xl text-center pt-4">THÔNG TIN SẢN PHẨM</div>
-                <div class="flex mt-10">
+                <div class="md:flex mt-10">
                     <div class="md:w-2/3">
                         <div class="flex text-white w-full bg-gradient-to-b from-[#FF41F7] to-[#6E2C91] rounded-t-xl py-4">
                             <div class="w-1/2 pl-7 border-white border-r-[0.0625rem]">MỤC</div>
@@ -415,30 +415,9 @@
                             <div class="border-[#FF41F7] border-[0.0625rem] pl-7 py-3  text-[#1F1F1F]">Tình trạng</div>
                             <div class="border-[#FF41F7] border-[0.0625rem] pl-8 py-3 text-[#858585]">Còn hàng</div>
                         </div>
-                        <!-- <div class="w-full flex">
-                            <div class="w-1/2 font-medium">
-                                <div class="border-[#FF41F7] border-[0.0625rem] pl-7 py-3  text-[#1F1F1F]">Thượng hiệu</div>
-                                <div class="border-[#FF41F7] border-[0.0625rem] pl-7 py-3  text-[#1F1F1F]">Đóng gói</div>
-                                <div class="border-[#FF41F7] border-[0.0625rem] pl-7 py-3  text-[#1F1F1F]">Dạng bào chế</div>
-                                <div class="border-[#FF41F7] border-[0.0625rem] pl-7 py-3  text-[#1F1F1F]">Xuất xứ</div>
-                                <div class="border-[#FF41F7] border-[0.0625rem] pl-7 py-3  text-[#1F1F1F]">Đối tượng sử dụng</div>
-                                <div class="border-[#FF41F7] border-[0.0625rem] pl-7 py-3  text-[#1F1F1F]">Thời điểm sử dụng</div>
-                                <div class="border-[#FF41F7] border-[0.0625rem] pl-7 py-3  text-[#1F1F1F]">Tình trạng</div>
-                            </div>
-                            <div class="w-1/2 font-medium">
-                                <div class="border-[#FF41F7] border-[0.0625rem] pl-8 py-3 text-[#858585]">MTV Dược khoa</div>
-                                <div class="border-[#FF41F7] border-[0.0625rem] pl-8 py-3 text-[#858585]">Hộp 1 lọ 30 viên</div>
-                                <div class="border-[#FF41F7] border-[0.0625rem] pl-8 py-3 text-[#858585]">Đường uống</div>
-                                <div class="border-[#FF41F7] border-[0.0625rem] pl-8 py-3 text-[#858585]">Việt Nam</div>
-                                <div class="border-[#FF41F7] border-[0.0625rem] pl-8 py-3 text-[#858585]">12 tuổi trở lên</div>
-                                <div class="border-[#FF41F7] border-[0.0625rem] pl-8 py-3 text-[#858585]">Trong bữa ăn</div>
-                                <div class="border-[#FF41F7] border-[0.0625rem] pl-8 py-3 text-[#858585]">Còn hàng</div>
-                            </div>
-                        </div> -->
-                        
                         <div class="font-semibold mt-6"><span class="text-[#FA1B1B]">Chống chỉ định*</span>: Không được dùng NeuroBasic cho người quá mẫn cảm với bất cứ thành phần nào có trong sản phẩm.</div>
                     </div>
-                    <div class="hidden md:flex w-1/3 ml-8 css_img">
+                    <div class="flex md:w-1/3 ml-8 css_img justify-center">
                         <img src="dist/img/product_img-medicine.png" alt="">
                     </div>
                 </div>
@@ -487,12 +466,12 @@
      <!-- use -->
      <section>
         <div class="my-8 lg:my-16">
-            <div class="container flex">
+            <div class="container md:flex">
                 <div class="hidden md:flex w-1/3 css_img">
                     <img src="dist/img/use_img-product.png" alt="">
                 </div>
-                <div class="w-1/2 md:w-1/3 md:mx-12 flex flex-col justify-between">
-                    <div class="mb-16 text-xl lg:text-2xl font-semibold">Hướng dẫn sử dụng</div>
+                <div class="w-full md:w-1/3 md:mx-12 flex flex-col md:justify-between">
+                    <div class="mb-6 md:mb-0 text-xl lg:text-2xl font-semibold">Hướng dẫn sử dụng</div>
                     <ul class="flex flex-col gap-6 font-semibold text-[#858585] text-sm">
                         <li class="list-disc ml-4">Dùng trực tiếp bằng đường uống</li>
                         <li class="list-disc ml-4">Uống trong bữa ăn cùng nước lọc vừa đủ</li>
@@ -500,8 +479,8 @@
                         <li class="list-disc ml-4">Trẻ em trên 12 tuổi và người lớn: uống mỗi lần 1 viên thuốc. Mỗi ngày dùng từ 1 đến 3 lần.</li>
                     </ul>
                 </div>
-                <div class="w-1/2 md:w-1/3 flex flex-col justify-between">
-                    <div class=" text-xl lg:text-2xl font-semibold">Sản phẩm Neurobasic gồm những thành phần chính là:</div>
+                <div class="w-full md:w-1/3 flex flex-col justify-between mt-4 md:mt-0">
+                    <div class="mb-6 md:mb-0 text-xl lg:text-2xl font-semibold">Sản phẩm Neurobasic gồm những thành phần chính là:</div>
                     <ul class="flex flex-col gap-6 font-semibold text-[#858585] text-sm">
                         <li class="list-disc ml-4">Phosphatidyl Serine 100mg</li>
                         <li class="list-disc ml-4">L Glutamine 100mg</li>
@@ -515,41 +494,41 @@
      </section>
 
      <!-- feedback -->
-     <section class="">
+     <section>
         <div class="mb-16 bg-gradient-to-b from-[#f6e3f5] to-[#e7e0eb] py-11">
             <div class="container">
                 <h3 class="uppercase font-medium text-2xl lg:text-3xl text-center mb-8 lg:mb-10">Phản hồi thực tế từ khách hàng</h3>
-                <div class="flex flex-col md:flex-row  gap-7">
+                <div class="flex flex-col lg:flex-row  gap-7">
                     <div class="basis-1/3 flex md:mr-[-2rem] 2xl:mr-[-2.75rem]">
-                        <div class="basis-1/4 mt-[2rem] md:mr-[-2rem] 2xl:mr-[-2.75rem] z-10">
+                        <div class="basis-1/4 lg:mt-[2rem] md:mr-[-2rem] z-10 lg:block flex justify-center items-center">
                             <img src="dist/img/feedback_user1.png" alt="" title="Ảnh" width="112" height="112">
                         </div>
-                        <div class="basis-3/4 bg-gradient-to-b from-[#FF41F7] to-[#6E2C91] rounded-xl text-white py-6 pl-11 pr-3">
-                            <p class="font-semibold text-[1.5rem] mb-2">CHÚ NGUYỄN VĂN TÚ</p>
-                            <p class="text-sm font-light">
+                        <div class="basis-3/4 flex flex-col min-h-[10rem] bg-gradient-to-b from-[#FF41F7] to-[#6E2C91] rounded-xl text-white py-6 pl-11 pr-3">
+                            <p class="font-semibold text-xl lg:text-2xl mb-2 lg:flex lg:flex-col lg:flex-1 ">Chú NGUYỄN VĂN TÚ</p>
+                            <p class="text-sm font-light lg:min-h-[12rem]">
                                 "Khi tôi đến tuổi trung niên, tôi bắt đầu có vấn đề về trí nhớ và tập trung Neurobasic đã thay đổi cuộc sống của tôi. Tôi đã sử dụng nó trong một năm và tôi thấy mình nhớ mọi thứ dễ dàng hơn. Điều này đã giúp tôi trong công việc và cuộc sống gia đình. Tôi không thể tin rằng sự thay đổi có thể đến từ một viên thuốc nhỏ như vậy."
                             </p>
                         </div>
                     </div>
                     <div class="basis-1/3 flex md:mr-[-2rem] 2xl:mr-[-2.75rem]">
-                        <div class="basis-1/4 mt-[2rem] md:mr-[-2rem] 2xl:mr-[-2.75rem] z-10">
+                        <div class="basis-1/4 lg:mt-[2rem] md:mr-[-2rem] z-10 lg:block flex justify-center items-center">
                             <img src="dist/img/feedback_user2.png" alt="" title="Ảnh" width="112" height="112">
                         </div>
-                        <div class="basis-3/4 bg-gradient-to-b from-[#FF41F7] to-[#6E2C91] rounded-xl text-white py-6 pl-11 pr-3">
-                            <p class="font-semibold text-[1.5rem] mb-2">CHÚ NGUYỄN VĂN TÚ</p>
-                            <p class="text-sm font-light">
-                                "Khi tôi đến tuổi trung niên, tôi bắt đầu có vấn đề về trí nhớ và tập trung Neurobasic đã thay đổi cuộc sống của tôi. Tôi đã sử dụng nó trong một năm và tôi thấy mình nhớ mọi thứ dễ dàng hơn. Điều này đã giúp tôi trong công việc và cuộc sống gia đình. Tôi không thể tin rằng sự thay đổi có thể đến từ một viên thuốc nhỏ như vậy."
+                        <div class="basis-3/4 flex flex-col min-h-[10rem] bg-gradient-to-b from-[#FF41F7] to-[#6E2C91] rounded-xl text-white py-6 pl-11 pr-3">
+                            <p class="font-semibold text-xl lg:text-2xl mb-2 lg:flex lg:flex-col lg:flex-1 ">Cô LÊ THỊ VÂN</p>
+                            <p class="text-sm font-light lg:min-h-[12rem]">
+                                "Sản phẩm này đã thay đổi cuộc sống của tôi. Tôi có thể tập trung và nhớ thông tin tốt hơn, giúp công việc và cuộc sống cá nhân trở nên dễ dàng hơn. Tôi hoàn toàn hài lòng và sẽ tiếp tục sử dụng."
                             </p>
                         </div>
                     </div>
                     <div class="basis-1/3 flex md:mr-[-2rem] 2xl:mr-[-2.75rem]">
-                        <div class="basis-1/4 mt-[2rem] md:mr-[-2rem] 2xl:mr-[-2.75rem] z-10">
+                        <div class="basis-1/4 lg:mt-[2rem] md:mr-[-2rem] z-10 lg:block flex justify-center items-center">
                             <img src="dist/img/feedback_user3.png" alt="" title="Ảnh" width="112" height="112">
                         </div>
-                        <div class="basis-3/4 bg-gradient-to-b from-[#FF41F7] to-[#6E2C91] rounded-xl text-white py-6 pl-11 pr-3">
-                            <p class="font-semibold text-[1.5rem] mb-2">CHÚ NGUYỄN VĂN TÚ</p>
-                            <p class="text-sm font-light">
-                                "Khi tôi đến tuổi trung niên, tôi bắt đầu có vấn đề về trí nhớ và tập trung Neurobasic đã thay đổi cuộc sống của tôi. Tôi đã sử dụng nó trong một năm và tôi thấy mình nhớ mọi thứ dễ dàng hơn. Điều này đã giúp tôi trong công việc và cuộc sống gia đình. Tôi không thể tin rằng sự thay đổi có thể đến từ một viên thuốc nhỏ như vậy."
+                        <div class="basis-3/4 flex flex-col min-h-[10rem] bg-gradient-to-b from-[#FF41F7] to-[#6E2C91] rounded-xl text-white py-6 pl-11 pr-3">
+                            <p class="font-semibold text-xl lg:text-2xl mb-2 lg:flex lg:flex-col lg:flex-1 ">Chị Chu Quỳnh Anh</p>
+                            <p class="text-sm font-light lg:min-h-[12rem]">
+                                "Tôi đã dùng Neurobasic trong một thời gian ngắn và hiệu quả thật bất ngờ! Lịch làm việc của tôi thường rất bận rộn và đôi khi tôi cảm thấy mệt mỏi và căng thẳng. Sản phẩm này đã thay đổi mọi thứ."
                             </p>
                         </div>
                     </div>
@@ -559,65 +538,30 @@
 
     </section>
     
-     <!-- <section>
-        <div class="">
-            <div class="container ">
-                <div class="py-11">
-                    <div class="font-medium text-3xl text-center ">Phản hồi thực tế từ khách hàng</div>
-                    <div class="flex gap-28 mt-4">
-                        <div class="relative w-1/3 bg-gradient-to-b from-[#FF41F7] to-[#6E2C91] text-white rounded-xl">
-                            <div class="absolute left-[-25%] top-[15%]">
-                                <img src="dist/img/feedback_user1.png" alt="">
-                            </div>
-                            <div class="my-6 ml-11 mr-3">
-                                <div class="font-semibold text-2xl mb-2">CHÚ NGUYỄN VĂN TÚ</div>
-                                <div class="text-sm font-light">"Khi tôi đến tuổi trung niên, tôi bắt đầu có vấn đề về trí nhớ và tập trung Neurobasic đã thay đổi cuộc sống của tôi. Tôi đã sử dụng nó trong một năm và tôi thấy mình nhớ mọi thứ dễ dàng hơn. Điều này đã giúp tôi trong công việc và cuộc sống gia đình. Tôi không thể tin rằng sự thay đổi có thể đến từ một viên thuốc nhỏ như vậy."</div>
-                            </div>
-                        </div>
-                        <div class="relative w-1/3 bg-gradient-to-b from-[#FF41F7] to-[#6E2C91] text-white rounded-xl">
-                            <div class="absolute left-[-25%] top-[15%]">
-                                <img src="dist/img/feedback_user2.png" alt="">
-                            </div>
-                            <div class="my-6 ml-11 mr-3">
-                                <div class="font-semibold text-2xl mb-2">CÔ LÊ THỊ VÂN</div>
-                                <div class="text-sm font-light">"Sản phẩm này đã thay đổi cuộc sống của tôi. Tôi có thể tập trung và nhớ thông tin tốt hơn, giúp công việc và cuộc sống cá nhân trở nên dễ dàng hơn. Tôi hoàn toàn hài lòng và sẽ tiếp tục sử dụng."</div>
-                            </div>
-                        </div>
-                        <div class="relative w-1/3 bg-gradient-to-b from-[#FF41F7] to-[#6E2C91] text-white rounded-xl">
-                            <div class="absolute left-[-25%] top-[15%]">
-                                <img src="dist/img/feedback_user3.png" alt="">
-                            </div>
-                            <div class="my-6 ml-11 mr-3">
-                                <div class="font-semibold text-2xl mb-2">Chị Chu Quỳnh Anh</div>
-                                <div class="text-sm font-light">"Tôi đã dùng Neurobasic trong một thời gian ngắn và hiệu quả thật bất ngờ! Lịch làm việc của tôi thường rất bận rộn và đôi khi tôi cảm thấy mệt mỏi và căng thẳng. Sản phẩm này đã thay đổi mọi thứ."</div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-     </section> -->
-     
      <!-- random -->
-     <!-- <section>
-        <div class="container flex">
-            <div class="w-1/3">
-                vòng quay
-            </div>
-            <div class="w-2/3 rounded-xl text-white font-semibold text-center" style="background-image: linear-gradient(135deg, #FF41F7, #6E2C91), url('img/ramdom_time-bg.png')" >
-                <div class="text-xl lg:text-[4rem] leading-[6rem] border-[#fff]  border-b-[0.0625rem] mx-[4.5rem]">VÒNG QUAY MAY MẮN</div>
-                <div class=" text-3xl mt-2">QUÀ TẶNG LÊN ĐẾN 80%</div>
-                <div class="mt-7 mb-9">
-                    <div class="">Thời gian còn lại</div>
-                    <div class="flex justify-center text-[5rem] leading-[6rem]">
-                        <div class="px-14">10</div>
-                        <div class="px-14 border-[#fff]  border-x-[0.0625rem] ">12</div>
-                        <div class="px-14">59</div>
-                    </div>
+     <!-- <section> -->
+        <div class="container md:flex">
+            <div class="md:w-1/3 flex flex-col justify-center items-center">
+                <div class="random">
+                    <ul class="wheel "></ul>
                 </div>
+                <button class="btn--wheel">Bấm nút quay</button>
+                <h1 class="msg"></h1>
+            </div>
+            <div class="md:py-9 py-4 max-h-[23.25rem] sm:w-2/3 mx-auto rounded-xl text-white font-semibold text-center" style="background-image: linear-gradient(to bottom, rgb(255, 64, 245), rgb(109, 43, 145)), url('dist/img/ramdom_time-bg.png'); background-size: contain; background-repeat: no-repeat;" >
+                <div class="text-xl lg:text-[4rem] lg:leading-[6rem] border-[#fff]  border-b-[0.0625rem] mx-[4.5rem]">VÒNG QUAY MAY MẮN</div>
+                <div class="text-2xl lg:text-3xl mt-4">QUÀ TẶNG LÊN ĐẾN 80%</div>
+                <!-- <div class="mt-4 md:mb-9"> -->
+                <div class="mb-4 md:mt-7">Thời gian còn lại</div>
+                <div class="flex justify-center text-4xl lg:text-[5rem] lg:leading-[6rem]">
+                    <div id="hours" class="hours px-4 md:px-14">00</div>
+                    <div id="minutes" class="minutes px-4 md:px-14 border-[#fff]  border-x-[0.0625rem] ">00</div>
+                    <div id="seconds" class="seconds px-4 md:px-14">00</div>
+                </div>
+                <!-- </div> -->
             </div>
         </div>
-    </section> -->
+    <!-- </section> -->
     <!-- <img src="dist/img/ramdom_time-bg.png" alt=""> -->
      
      <!-- contact -->
@@ -625,11 +569,11 @@
         <div class="container">
             <div class="">
                 <div class="font-medium text-2xl lg:text-3xl text-center">Nhập thông tin để nhận được tư vấn miễn phí</div>
-                <div class="flex mt-8"> 
-                    <div class="w-1/2 mr-8 css_img">
+                <div class="md:flex mt-8"> 
+                    <div class="md:w-1/2 mr-8 css_img">
                         <img src="dist/img/contact_img-family.png" alt="">
                     </div>
-                    <div class="w-1/2">
+                    <div class="md:w-1/2 mt-4 md:mt-0">
                         <div class="text-xl lg:text-2xl">LIÊN HỆ VỚI CHÚNG TÔI</div>
                         <div class="flex flex-col gap-4 my-8">
                             <input  type="text" class="name-footer leading-9 pb-2 outline-none border-[#C8C8C8] border-b-[0.0625rem] placeholder-[#575757]" placeholder="Tên của bạn*">
@@ -637,7 +581,7 @@
                             <input  type="email" class="email-footer leading-9 pb-2 outline-none border-[#C8C8C8] border-b-[0.0625rem] placeholder-[#575757]" placeholder="Email*">
                             <input  type="text" class="content-footer pb-10 lg:pb-28 outline-none border-[#C8C8C8] border-b-[0.0625rem] placeholder-[#575757]" placeholder="Nhu cầu cần tư vấn của quý khách">
                         </div>
-                        <div onclick="sendFooter()" class="bg-gradient-to-b from-[#FF41F7] to-[#6E2C91] hover:cursor-pointer rounded-full text-sm lg:text-lg max-w-[19rem] text-center text-white py-2 lg:py-4">Gửi thông tin</div>
+                        <div onclick="sendFooter()" class="hover:border-[1px] hover:border-solid hover:border-[#6E2C91] hover:text-transparent hover:bg-clip-text  hover:cursor-pointer font-medium bg-gradient-to-b from-[#FF41F7] to-[#6E2C91] rounded-full text-sm lg:text-lg max-w-[19rem] text-center text-white py-4">Gửi thông tin</div>
                     </div>
                 </div>
             </div>
@@ -645,58 +589,50 @@
      </section>
 
      <!-- footer -->
-     <!-- <section>
-        <div class="bg-[#faebfb] bg-no-repeat bg-center mt-24 ">
+     <section>
+        <div class="bg-[#faebfb] bg-no-repeat bg-center mt-12 md:mt-24 ">
             <div class="container lg:flex gap-8">
                 <div class="lg:w-1/3 flex mt-6">
-                    <div class="">
+                    <div class="mx-auto">
                         <img src="dist/img/footer_logo.png" alt="">
                     </div>
                 </div>
-                <div class="lg:w-2/3 flex gap-8 lg:gap-24 mt-12 mb-6">
-                    <div class="w-1/4">
+                <div class="lg:w-2/3 flex md:flex-row flex-col gap-8 lg:gap-24 mt-12 mb-6">
+                    <div class="md:w-1/4">
                         <div class="font-semibold text-lg lg:text-2xl leading-9 mb-2">THÔNG TIN</div>
                         <div class="flex flex-col gap-5">
-                            <div class="text-[#858585] text-sm lg:text-base">Giới thiệu</div>
-                            <div class="text-[#858585] text-sm lg:text-base">Liên hệ</div>
-                            <div class="text-[#858585] text-sm lg:text-base">Điều khoản dịch vụ</div>
+                            <a class="cursor-pointer text-[#858585] text-sm lg:text-base">Giới thiệu</a>
+                            <a class="cursor-pointer text-[#858585] text-sm lg:text-base">Liên hệ</a>
+                            <a class="cursor-pointer text-[#858585] text-sm lg:text-base">Điều khoản dịch vụ</a>
                         </div>
                     </div>
-                    <div class="w-1/4">
+                    <div class="md:w-1/4">
                         <div class="font-semibold text-lg lg:text-2xl leading-9 mb-2">TRUYỀN THÔNG</div>
                         <div class="flex flex-col gap-5">
                             <div class="flex items-center">
-                                <div class="mr-4">
-                                    <img src="dist/img/footer_icon-fb.png" alt="">
-                                </div>
-                                <div class="text-[#858585] text-sm lg:text-base">Facebook</div>
+                                <span class="icon w-6 h-6 bg-no-repeat bg-contain shrink-0 mr-4" style="background-image: url(dist/img/footer_icon-fb.png);"></span>
+                                <span class="text-[#858585] text-sm lg:text-base">Facebook</span>
                             </div>
                             <div class="flex items-center">
-                                <div class="mr-4">
-                                    <img src="dist/img/footer_icon-zalo.png" alt="">
-                                </div>
-                                <div class="text-[#858585] text-sm lg:text-base">Zalo</div>
+                                <span class="icon w-6 h-6 bg-no-repeat bg-contain shrink-0 mr-4" style="background-image: url(dist/img/footer_icon-zalo.png);"></span>
+                                <span class="text-[#858585] text-sm lg:text-base">Zalo</span>
                             </div>
                             <div class="flex items-center">
-                                <div class="mr-4">
-                                    <img src="dist/img/footer_icon-whatsup.png" alt="">
-                                </div>
-                                <div class="text-[#858585] text-sm lg:text-base">WhatsApp</div>
+                                <span class="icon w-6 h-6 bg-no-repeat bg-contain shrink-0 mr-4" style="background-image: url(dist/img/footer_icon-whatsup.png);"></span>
+                                <span class="text-[#858585] text-sm lg:text-base">WhatsApp</span>
                             </div>
                             <div class="flex items-center">
-                                <div class="mr-4">
-                                    <img src="dist/img/footer_icon-youtube.png" alt="">
-                                </div>
-                                <div class="text-[#858585] text-sm lg:text-base">Youtube</div>
+                                <span class="icon w-6 h-6 bg-no-repeat bg-contain shrink-0 mr-4" style="background-image: url(dist/img/footer_icon-youtube.png);"></span>
+                                <span class="text-[#858585] text-sm lg:text-base">Youtube</span>
                             </div>
                         </div>
                     </div>
-                    <div class="w-1/2">
+                    <div class="md:w-1/2">
                         <div class="font-semibold text-lg lg:text-2xl leading-9 mb-2">LIÊN HỆ</div>
                         <div class="flex flex-col gap-5">
-                            <div class="text-[#858585] text-sm lg:text-base">Tầng 6 tòa sông Đà, 131 Trần phú, Văn Quán Hà Đông, Hà Nội, Việt Nam</div>
-                            <div class="text-[#858585] text-sm lg:text-base">0588227799</div>
-                            <div class="text-[#858585] text-sm lg:text-base">Banhang@orientjsc.vn/office@orientjsc.vn</div>
+                            <a class="cursor-pointer text-[#858585] text-sm lg:text-base">Tầng 6 tòa sông Đà, 131 Trần phú, Văn Quán Hà Đông, Hà Nội, Việt Nam</a>
+                            <a class="cursor-pointer text-[#858585] text-sm lg:text-base">0588227799</a>
+                            <a class="cursor-pointer text-[#858585] text-sm lg:text-base">Banhang@orientjsc.vn/office@orientjsc.vn</a>
                         </div>
                     </div>
                 </div>
@@ -705,18 +641,200 @@
         <div class="bg-[#6E2C91] pt-4 pb-3">
             <div class="text-sm text-center text-white mx-1">Copyright © 2023 NeuroBasic. All rights reserved. Designed and developed by Tech5S</div>
         </div>
-    </section> -->
-    
+    </section>
+    <script>
+        // random
+(() => {
+	const $ = document.querySelector.bind(document);
+
+	let timeRotate = 7000; //7 giây
+	let currentRotate = 0;
+	let isRotating = false;
+	const wheel = $('.wheel');
+	const btnWheel = $('.btn--wheel');
+	const showMsg = $('.msg');
+
+	//=====< Danh sách phần thưởng >=====
+	const listGift = [
+		{
+			text: 'Giảm 10%',
+			percent: 10 / 100,
+		},
+		{
+			text: 'Giảm 20%',
+			percent: 10 / 100,
+		},
+		{
+			text: 'Giảm 25%',
+			percent: 5 / 100,
+		},
+		{
+			text: 'Giảm 30%',
+			percent: 5 / 100,
+		},
+		{
+			text: 'Giảm 45%',
+			percent: 5 / 100,
+		},
+		{
+			text: 'Giảm 50%',
+			percent: 40 / 100,
+		},
+		{
+			text: 'Mua 1 tặng 1',
+			percent: 10 / 100,
+		},
+	];
+
+	//=====< Số lượng phần thưởng >=====
+	const size = listGift.length;
+
+	//=====< Số đo góc của 1 phần thưởng chiếm trên hình tròn >=====
+	const rotate = 360 / size;
+
+	//=====< Số đo góc cần để tạo độ nghiêng, 90 độ trừ đi góc của 1 phần thưởng chiếm >=====
+	const skewY = 90 - rotate;
+
+	listGift.map((item, index) => {
+		//=====< Tạo thẻ li >=====
+		const elm = document.createElement('li');
+
+		//=====< Xoay và tạo độ nghiêng cho các thẻ li >=====
+		elm.style.transform = `rotate(${
+			rotate * index
+		}deg) skewY(-${skewY}deg)`;
+
+		//=====< Thêm background-color so le nhau và căn giữa cho các thẻ text>=====
+		if (index % 3 === 0) {
+			elm.innerHTML = `<p style="transform: skewY(${skewY}deg) rotate(${rotate / 2}deg);" class="text text-1">
+			  <b>${item.text}</b>
+			</p>`;
+		  } else if (index % 3 === 1) {
+			elm.innerHTML = `<p style="transform: skewY(${skewY}deg) rotate(${rotate / 2}deg);" class="text text-2">
+			  <b>${item.text}</b>
+			</p>`;
+		  } else {
+			elm.innerHTML = `<p style="transform: skewY(${skewY}deg) rotate(${rotate / 2}deg);" class="text text-3">
+			  <b>${item.text}</b>
+			</p>`;
+		  }
+
+		//=====< Thêm vào thẻ ul >=====
+		wheel.appendChild(elm);
+	});
+
+	/********** Hàm bắt đầu **********/
+	const start = () => {
+		showMsg.innerHTML = '';
+		isRotating = true;
+		//=====< Lấy 1 số ngầu nhiên 0 -> 1 >=====
+		const random = Math.random();
+
+		//=====< Gọi hàm lấy phần thưởng >=====
+		const gift = getGift(random);
+
+		//=====< Số vòng quay: 360 độ = 1 vòng (Góc quay hiện tại) >=====
+		currentRotate += 360 * 10;
+
+		//=====< Gọi hàm quay >=====
+		rotateWheel(currentRotate, gift.index);
+
+		//=====< Gọi hàm in ra màn hình >=====
+		showGift(gift);
+	};
+
+	/********** Hàm quay vòng quay **********/
+	const rotateWheel = (currentRotate, index) => {
+		$('.wheel').style.transform = `rotate(${
+			//=====< Góc quay hiện tại trừ góc của phần thưởng>=====
+			//=====< Trừ tiếp cho một nửa góc của 1 phần thưởng để đưa mũi tên về chính giữa >=====
+			currentRotate - index * rotate - rotate / 2
+		}deg)`;
+	};
+
+	/********** Hàm lấy phần thưởng **********/
+	const getGift = randomNumber => {
+		let currentPercent = 0;
+		let list = [];
+
+		listGift.forEach((item, index) => {
+			//=====< Cộng lần lượt phần trăm trúng của các phần thưởng >=====
+			currentPercent += item.percent;
+
+			//=====< Số ngẫu nhiên nhỏ hơn hoặc bằng phần trăm hiện tại thì thêm phần thưởng vào danh sách >=====
+			if (randomNumber <= currentPercent) {
+				list.push({ ...item, index });
+			}
+		});
+
+		//=====< Phần thưởng đầu tiên trong danh sách là phần thưởng quay được>=====
+		return list[0];
+	};
+
+	/********** In phần thưởng ra màn hình **********/
+	const showGift = gift => {
+		let timer = setTimeout(() => {
+			isRotating = false;
+
+			showMsg.innerHTML = `Chúc mừng bạn đã nhận được "${gift.text}"`;
+
+			clearTimeout(timer);
+		}, timeRotate);
+	};
+
+	/********** Sự kiện click button start **********/
+	btnWheel.addEventListener('click', () => {
+		!isRotating && start();
+	});
+})();
+
+// video
+const video = document.querySelector(".custom-video__video");
+const controls = document.querySelector(".custom-video__control");
+
+video.addEventListener("click", function () {
+  if (controls.innerHTML === "▶") {
+	controls.innerHTML = "| |";
+	video.play();
+  } else {
+	controls.innerHTML = "▶";
+	video.pause();
+  }
+});
+
+video.addEventListener("mouseout", function () {
+  if (!video.paused) {
+	controls.style.display = "none";
+  }
+});
+
+video.addEventListener("mouseover", function () {
+  controls.style.display = "flex";
+});
+
+video.addEventListener(
+  "ended",
+  function () {
+	controls.style.display = "flex";
+	controls.innerHTML = "▶";
+  },
+  false
+);
+
+
+
+
+
+
+
+    </script>
 </body>
 </html>
 
 
 
-
-<!-- respon bị nhỏ img -->
+<!-- img đè video -->
 <!-- random -->
-<!-- footer tràn  -->
-<!-- modal -->
 
 
 

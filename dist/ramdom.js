@@ -1,30 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>Document</title>
-		<script src="./ramdom.js"></script>
-		<link rel="stylesheet" href="app.css" />
-	</head>
-	<body>
-		<main>
-			<div class="main">
-				<span>
-					<ul class="wheel">
-					</ul>
-					<div class="arr">
-						<img src="Group 153.png" alt="" style="">
-					</div>
-					
-				</span>
-				<button class="btn--wheel">Bấm nút quay</button>
-			<!-- </div> -->
-			<h1 class="msg"></h1>
-		</main>
-		<script src="main.js">
-            // random
+// random
 (() => {
 	const $ = document.querySelector.bind(document);
 
@@ -168,6 +142,3 @@
 		!isRotating && start();
 	});
 })();
-        </script>
-	</body>
-</html>

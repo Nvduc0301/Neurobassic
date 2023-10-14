@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Custom Video Play/Pause button</title>
+  </head>
+  <style>
+    @import url("https://fonts.googleapis.com/css2?family=Oswald:wght@300;400&display=swap");
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    /* .custom-video {
+    position: relative;
+    top: 0;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    flex-wrap: wrap;
+    background-color: #00808097;
+} */
+
+    .custom-video__video {
+      border-radius: 0.2em;
+      cursor: pointer;
+    }
+
+    .custom-video__control {
+      position: absolute;
+      top: 43%;
+      left: 46%;
+      background-color: rgba(0, 0, 0, 0.5);
+      border-radius: 50%;
+      padding: 1em;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: #ffffff;
+      font-size: 1em;
+      font-weight: 400;
+      width: 3em;
+      height: 3em;
+      white-space: nowrap;
+      line-height: 0;
+    }
+
+    video::-webkit-media-controls {
+      position: relative;
+      z-index: 1;
+    }
+  </style>
+
+  <body>
+    <!-- first video  -->
+    <video class="custom-video__video" width="100%" height="auto" muted>
+      <source src="img/BVPD.mp4" type="video/mp4" />
+      Your browser does not support the video tag.
+    </video>
+    <div class="custom-video__control">▶</div>
+    <script>
+      // Adding functinality to video play and pause button
+      const video = document.querySelector(".custom-video__video");
+      const controls = document.querySelector(".custom-video__control");
+
+      video.addEventListener("click", function () {
+        if (controls.innerHTML === "▶") {
+          controls.innerHTML = "| |";
+          video.play();
+        } else {
+          controls.innerHTML = "▶";
+          video.pause();
+        }
+      });
+
+      video.addEventListener("mouseout", function () {
+        if (!video.paused) {
+          controls.style.display = "none";
+        }
+      });
+
+      video.addEventListener("mouseover", function () {
+        controls.style.display = "flex";
+      });
+
+      video.addEventListener(
+        "ended",
+        function () {
+          controls.style.display = "flex";
+          controls.innerHTML = "▶";
+        },
+        false
+      );
+    </script>
+  </body>
+</html>
