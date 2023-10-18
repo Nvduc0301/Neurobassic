@@ -507,8 +507,8 @@
             <div class="container">
                 <h3 class="uppercase font-medium text-2xl lg:text-3xl text-center mb-8 lg:mb-10">Phản hồi thực tế từ khách hàng</h3>
                 <div class="flex flex-col lg:flex-row  gap-7">
-                    <div class="basis-1/3 flex md:mr-[-2rem] 2xl:mr-[-2.75rem]">
-                        <div class="basis-1/4 lg:mt-[2rem] md:mr-[-2rem] z-10 lg:block flex justify-center items-center">
+                    <div class="basis-1/3 flex lg:mr-[-2rem] 2xl:mr-[-2.75rem]">
+                        <div class="basis-1/4 lg:mt-[2rem] lg:mr-[-2rem] z-10 lg:block flex justify-center items-center">
                             <img src="dist/img/feedback_user1.png" alt="" title="Ảnh" width="112" height="112">
                         </div>
                         <div class="basis-3/4 flex flex-col min-h-[10rem] bg-gradient-to-b from-[#FF41F7] to-[#6E2C91] rounded-xl text-white py-6 pl-11 pr-3">
@@ -518,8 +518,8 @@
                             </p>
                         </div>
                     </div>
-                    <div class="basis-1/3 flex md:mr-[-2rem] 2xl:mr-[-2.75rem]">
-                        <div class="basis-1/4 lg:mt-[2rem] md:mr-[-2rem] z-10 lg:block flex justify-center items-center">
+                    <div class="basis-1/3 flex lg:mr-[-2rem] 2xl:mr-[-2.75rem]">
+                        <div class="basis-1/4 lg:mt-[2rem] lg:mr-[-2rem] z-10 lg:block flex justify-center items-center">
                             <img src="dist/img/feedback_user2.png" alt="" title="Ảnh" width="112" height="112">
                         </div>
                         <div class="basis-3/4 flex flex-col min-h-[10rem] bg-gradient-to-b from-[#FF41F7] to-[#6E2C91] rounded-xl text-white py-6 pl-11 pr-3">
@@ -529,8 +529,8 @@
                             </p>
                         </div>
                     </div>
-                    <div class="basis-1/3 flex md:mr-[-2rem] 2xl:mr-[-2.75rem]">
-                        <div class="basis-1/4 lg:mt-[2rem] md:mr-[-2rem] z-10 lg:block flex justify-center items-center">
+                    <div class="basis-1/3 flex lg:mr-[-2rem] 2xl:mr-[-2.75rem]">
+                        <div class="basis-1/4 lg:mt-[2rem] lg:mr-[-2rem] z-10 lg:block flex justify-center items-center">
                             <img src="dist/img/feedback_user3.png" alt="" title="Ảnh" width="112" height="112">
                         </div>
                         <div class="basis-3/4 flex flex-col min-h-[10rem] bg-gradient-to-b from-[#FF41F7] to-[#6E2C91] rounded-xl text-white py-6 pl-11 pr-3">
@@ -659,43 +659,43 @@
     </section>
     <script>
     // coutdown
-function countTime(hours, minutes, seconds) {
-  var hoursDiv = document.getElementById("hours");
-  var minutesDiv = document.getElementById("minutes");
-  var secondsDiv = document.getElementById("seconds");
+    function countTime(hours, minutes, seconds) {
+    var hoursDiv = document.getElementById("hours");
+    var minutesDiv = document.getElementById("minutes");
+    var secondsDiv = document.getElementById("seconds");
 
-  var totalMilliseconds = ((hours * 60 * 60) + (minutes * 60) + seconds) * 1000;
-  var startTime = null;
+    var totalMilliseconds = ((hours * 60 * 60) + (minutes * 60) + seconds) * 1000;
+    var startTime = null;
 
-  function updateClock(timestamp) {
-    if (!startTime) startTime = timestamp;
-    var elapsedTime = timestamp - startTime;
+    function updateClock(timestamp) {
+        if (!startTime) startTime = timestamp;
+        var elapsedTime = timestamp - startTime;
 
-    if (elapsedTime >= totalMilliseconds) {
-      hoursDiv.innerHTML = "00";
-      minutesDiv.innerHTML = "00";
-      secondsDiv.innerHTML = "00";
-      console.log("Time is up!");
-      return;
+        if (elapsedTime >= totalMilliseconds) {
+        hoursDiv.innerHTML = "00";
+        minutesDiv.innerHTML = "00";
+        secondsDiv.innerHTML = "00";
+        console.log("Time is up!");
+        return;
+        }
+
+        var millisecondsLeft = totalMilliseconds - elapsedTime;
+
+        var hoursLeft = Math.floor(millisecondsLeft / (1000 * 60 * 60));
+        var minutesLeft = Math.floor((millisecondsLeft % (1000 * 60 * 60)) / (1000 * 60));
+        var secondsLeft = Math.floor((millisecondsLeft % (1000 * 60)) / 1000);
+
+        document.getElementById("hours").innerHTML = hoursLeft < 10 ? "0" + hoursLeft : hoursLeft;
+        document.getElementById("minutes").innerHTML = minutesLeft < 10 ? "0" + minutesLeft : minutesLeft;
+        document.getElementById("seconds").innerHTML = secondsLeft < 10 ? "0" + secondsLeft : secondsLeft;
+
+        requestAnimationFrame(updateClock);
     }
 
-    var millisecondsLeft = totalMilliseconds - elapsedTime;
-
-    var hoursLeft = Math.floor(millisecondsLeft / (1000 * 60 * 60));
-    var minutesLeft = Math.floor((millisecondsLeft % (1000 * 60 * 60)) / (1000 * 60));
-    var secondsLeft = Math.floor((millisecondsLeft % (1000 * 60)) / 1000);
-
-    document.getElementById("hours").innerHTML = hoursLeft < 10 ? "0" + hoursLeft : hoursLeft;
-    document.getElementById("minutes").innerHTML = minutesLeft < 10 ? "0" + minutesLeft : minutesLeft;
-    document.getElementById("seconds").innerHTML = secondsLeft < 10 ? "0" + secondsLeft : secondsLeft;
-
     requestAnimationFrame(updateClock);
-  }
+    }
 
-  requestAnimationFrame(updateClock);
-}
-
-countTime(6, 0, 0);
+    countTime(6, 0, 0);
     // random
     (() => {
         const $ = document.querySelector.bind(document);
@@ -719,15 +719,15 @@ countTime(6, 0, 0);
             },
             {
                 text: 'Giảm 25%',
-                percent: 5 / 100,
+                percent: 10 / 100,
             },
             {
                 text: 'Giảm 30%',
-                percent: 5 / 100,
+                percent: 10 / 100,
             },
             {
                 text: 'Giảm 45%',
-                percent: 5 / 100,
+                percent: 10 / 100,
             },
             {
                 text: 'Giảm 50%',
@@ -801,7 +801,7 @@ countTime(6, 0, 0);
             $('.wheel').style.transform = `rotate(${
                 //=====< Góc quay hiện tại trừ góc của phần thưởng>=====
                 //=====< Trừ tiếp cho một nửa góc của 1 phần thưởng để đưa mũi tên về chính giữa >=====
-                // currentRotate - index * rotate - rotate / 4
+                // currentRotate - index * rotate - rotate / 2
                 currentRotate + (90 - rotate / 2) - index * rotate
             }deg)`;
         };
@@ -827,7 +827,14 @@ countTime(6, 0, 0);
             });
 
             //=====< Phần thưởng đầu tiên trong danh sách là phần thưởng quay được>=====
-            return list[0];
+               // Kiểm tra xem danh sách 'list' có phần tử không
+            // if (list.length >= 0) {
+                return list[0];
+            // }
+            //  else {
+            //     // Trả về một phần thưởng mặc định nếu không tìm thấy phần thưởng nào
+            //     return { text: "Phần thưởng mặc định", percent: 0, index: 0 };
+            // }
         };
 
         /********** In phần thưởng ra màn hình **********/
